@@ -4,262 +4,67 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Powered By RPM — Subaru & High-Performance Builds | Huntington Beach</title>
-<meta name="description" content="Huntington Beach's trusted Subaru and high-performance shop. 500+ HP BRZ/86 builds, turbo kits, engine work, Crawford Performance authorized installer. Call RPM at (714) 397-0820."/>
+<meta name="description" content="Huntington Beach's trusted Subaru and high-performance shop. 500+ HP BRZ/86 builds, turbo kits, engine work, Crawford Performance authorized installer. Call (714) 397-0820."/>
 <meta name="theme-color" content="#06070a"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Powered By RPM — Subaru & High-Performance Builds"/>
-<meta property="og:description" content="Huntington Beach's trusted Subaru and high-performance shop. 500+ HP BRZ/86 builds, turbo kits, engine work, Crawford Performance authorized installer."/>
+<meta property="og:title" content="Powered By RPM — Huntington Beach"/>
+<meta property="og:description" content="Subaru, BRZ, GR86 performance done right. Huntington Beach, CA."/>
 <meta property="og:url" content="https://maxpilich-ai.github.io/rpm/"/>
-<meta name="twitter:card" content="summary_large_image"/>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23f4f4f6'/%3E%3Ctext x='50' y='65' text-anchor='middle' font-family='Arial Black,sans-serif' font-size='42' font-weight='900' fill='%2306070a'%3ERPM%3C/text%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Cormorant+Garamond:ital,wght@1,300;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#06070a;--bg2:#0d0e12;--ink:#f4f4f6;--ink2:#c5c6cc;--ink3:#8a8b94;--ink4:#4a4b54;--blue:#2f7dff;--blue2:#5aa0ff;--blueDeep:#0b3a8a;--hot:#ff3a45;--r:14px;--ease:cubic-bezier(0.7,0,0.2,1);--easeOut:cubic-bezier(0.16,1,0.3,1);--easeBack:cubic-bezier(0.34,1.56,0.64,1)}
-html{scroll-behavior:smooth;overflow-x:hidden;max-width:100vw}
-*::-webkit-scrollbar{width:10px;height:10px}
-*::-webkit-scrollbar-track{background:var(--bg)}
-*::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--blue),var(--blueDeep));border-radius:10px;border:2px solid var(--bg)}
-*::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,var(--blue2),var(--blue));box-shadow:0 0 12px rgba(47,125,255,.6)}
-:focus{outline:none}
-:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:6px}
-.skip-link{position:absolute;top:-100px;left:0;background:var(--blue);color:var(--bg);padding:14px 24px;z-index:99999;font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;transition:top .2s}
-.skip-link:focus{top:0}
-body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;overflow-x:hidden;max-width:100vw;word-wrap:break-word;-webkit-font-smoothing:antialiased;cursor:none}
-@media(hover:none){body{cursor:auto}}
-a,button{cursor:none;color:inherit;text-decoration:none;font:inherit;background:none;border:0}
-@media(hover:none){a,button{cursor:auto}}
-img,svg{display:block;max-width:100%}
-::selection{background:var(--blue);color:var(--bg)}
-/*=== CINEMATIC INTRO ===*/
-.intro{position:fixed;inset:0;z-index:99999;background:radial-gradient(ellipse at center,#0a0d18 0%,#06070a 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;animation:introOut 0.7s var(--easeOut) 1.7s forwards;overflow:hidden}
-.intro::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(47,125,255,0.05) 3px,rgba(47,125,255,0.05) 4px);pointer-events:none;animation:introScan 3s linear infinite}
-@keyframes introOut{0%{opacity:1;filter:blur(0)}70%{opacity:1}100%{opacity:0;visibility:hidden;filter:blur(10px);transform:scale(1.08);pointer-events:none}}
-@keyframes introScan{from{background-position:0 0}to{background-position:0 8px}}
-.intro-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(47,125,255,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(47,125,255,0.08) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 0%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,black 0%,transparent 75%);animation:introGridFade 1.2s var(--easeOut) forwards;opacity:0}
-@keyframes introGridFade{to{opacity:1}}
-.intro-glow{position:absolute;top:50%;left:50%;width:600px;height:600px;background:radial-gradient(circle,rgba(47,125,255,0.4) 0%,transparent 50%);transform:translate(-50%,-50%) scale(0.3);filter:blur(40px);animation:introGlow 1.6s var(--easeOut) forwards;opacity:0}
-@keyframes introGlow{0%{opacity:0;transform:translate(-50%,-50%) scale(0.3)}50%{opacity:1}100%{opacity:0.7;transform:translate(-50%,-50%) scale(1.5)}}
-.intro-mark{position:relative;z-index:2;font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,13vw,10rem);letter-spacing:.04em;line-height:.88;text-align:center}
-.intro-mark .row{display:block;opacity:0;transform:translateY(60px) skewY(8deg);animation:introRowIn 0.65s var(--easeOut) forwards}
-.intro-mark .row:nth-child(1){animation-delay:0.05s;color:var(--ink)}
-.intro-mark .row:nth-child(2){animation-delay:0.15s;color:var(--blue);text-shadow:0 0 40px rgba(47,125,255,0.8),0 0 80px rgba(47,125,255,0.4)}
-.intro-mark .row:nth-child(3){animation-delay:0.25s;-webkit-text-stroke:1.5px var(--ink);color:transparent}
-@keyframes introRowIn{0%{opacity:0;transform:translateY(60px) skewY(8deg)}70%{opacity:1}100%{opacity:1;transform:translateY(0) skewY(0)}}
-.intro-bar{position:relative;z-index:2;margin-top:60px;width:min(420px,68vw);height:1px;background:rgba(255,255,255,0.08);overflow:hidden}
-.intro-bar::after{content:'';position:absolute;left:0;top:-1px;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue2),var(--blue));box-shadow:0 0 18px var(--blue),0 0 36px rgba(47,125,255,0.6);width:0;animation:introLoad 1.2s var(--easeOut) 0.4s forwards}
-@keyframes introLoad{to{width:100%}}
-.intro-tag{position:relative;z-index:2;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.4em;color:var(--ink3);text-transform:uppercase;margin-top:20px;opacity:0;animation:introFade .4s ease 0.5s forwards}
-.intro-tag::before{content:'>';color:var(--blue);margin-right:10px;animation:blink 0.7s steps(2) infinite}
-@keyframes introFade{to{opacity:1}}
-@keyframes blink{0%{opacity:1}50%{opacity:0}}
-.intro-c{position:absolute;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ink4);text-transform:uppercase;z-index:2;opacity:0;animation:introFade .3s ease 0.3s forwards}
-.intro-c.tl{top:32px;left:32px}
-.intro-c.tr{top:32px;right:32px;color:var(--blue)}
-.intro-c.tr::before{content:'';display:inline-block;width:6px;height:6px;background:#2bff5a;border-radius:50%;margin-right:8px;box-shadow:0 0 10px #2bff5a;vertical-align:middle;animation:pulse 1.4s ease infinite}
-.intro-c.bl{bottom:32px;left:32px}
-.intro-c.br{bottom:32px;right:32px}
-
-.intro-skip{position:absolute;bottom:80px;right:30px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:var(--ink2);padding:10px 18px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;cursor:none;transition:all .3s var(--easeOut);z-index:3;opacity:0;animation:introFade .3s ease 0.9s forwards;pointer-events:auto}
-.intro-skip:hover{background:var(--blue);border-color:var(--blue);color:var(--bg);transform:translateY(-2px)}
-.intro.dismissed{animation:introOut .5s var(--easeOut) forwards!important;animation-delay:0s!important}
-@media(max-width:600px){.intro-skip{bottom:60px;right:20px}}
-@media(prefers-reduced-motion:reduce){.intro{animation:introOut .3s linear 0s forwards}.intro *{animation:none!important}}
-/*=== END INTRO ===*/
-.scroll-progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--blue),var(--blue2));z-index:9997;transition:width .1s linear;box-shadow:0 0 12px rgba(47,125,255,.6)}
-.cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%}
-.cursor{width:32px;height:32px;border:1.5px solid var(--ink);transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s,border-color .25s;mix-blend-mode:difference}
-.cursor-dot{width:4px;height:4px;background:var(--ink);transform:translate(-50%,-50%);mix-blend-mode:difference}
-.cursor.is-hover{width:60px;height:60px;background:rgba(47,125,255,.15);border-color:var(--blue)}
-@media(hover:none){.cursor,.cursor-dot{display:none}}
-.goo-cursor{position:fixed;top:0;left:0;pointer-events:none;z-index:9998;filter:url(#gooFilter);mix-blend-mode:screen}
-@media(hover:none){.goo-cursor{display:none}}
-.section-dots{position:fixed;right:28px;top:50%;transform:translateY(-50%);z-index:150;display:flex;flex-direction:column;gap:18px}
-.section-dots a{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2);transition:all .5s var(--easeOut);position:relative}
-.section-dots a:hover{background:var(--ink)}
-.section-dots a.active{background:var(--blue);height:32px;border-radius:6px;box-shadow:0 0 14px rgba(47,125,255,.7)}
-.section-dots a::after{content:attr(data-label);position:absolute;right:18px;top:50%;transform:translateY(-50%);font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);white-space:nowrap;padding:6px 12px;background:rgba(7,8,10,.85);backdrop-filter:blur(8px);border-radius:999px;opacity:0;pointer-events:none;transition:opacity .3s}
-.section-dots a:hover::after{opacity:1}
-@media(max-width:1100px){.section-dots{display:none}}
-.container{width:100%;max-width:1400px;margin:0 auto;padding:0 40px;position:relative;z-index:2}
-section{padding:140px 0;position:relative}
-@media(max-width:768px){section{padding:90px 0}.container{padding:0 22px}}
-@media(max-width:400px){.container{padding:0 18px}section{padding:70px 0}}
-.display{font-family:'Bebas Neue',sans-serif;font-weight:400;line-height:.92;letter-spacing:.01em}
-.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:12px}
-.eyebrow::before{content:'';width:24px;height:1px;background:var(--blue)}
-nav.top{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 40px;display:flex;align-items:center;justify-content:space-between;transition:padding .4s var(--easeOut),background .4s;background:linear-gradient(180deg,rgba(7,8,10,.92) 0%,rgba(7,8,10,.55) 70%,rgba(7,8,10,0) 100%);backdrop-filter:blur(10px)}
-nav.top.scrolled{background:rgba(7,8,10,.95);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(255,255,255,.05);padding:14px 40px}
-.brand{display:flex;align-items:center;gap:14px}
-.brand-mark{width:46px;height:46px;background:linear-gradient(135deg,var(--ink) 0%,#d0d0d6 50%,#a8a9af 100%);color:var(--bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.05em;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.5),0 0 0 1px rgba(47,125,255,.2);text-shadow:0.5px 0 rgba(47,125,255,.5),-0.5px 0 rgba(255,58,69,.4)}
-.brand-mark::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 30%,rgba(47,125,255,.65) 50%,transparent 70%);animation:shine 4s ease-in-out infinite;z-index:2}
-.brand-mark::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 2px,rgba(47,125,255,.2) 2px,rgba(47,125,255,.2) 3px);mix-blend-mode:overlay;border-radius:8px;animation:hscan 2.5s linear infinite;pointer-events:none;z-index:3}
-@keyframes shine{0%,100%{transform:translateX(-150%)}50%{transform:translateX(150%)}}
-@keyframes hscan{from{background-position:0 0}to{background-position:0 8px}}
-.brand-text{display:flex;flex-direction:column;line-height:1.1}
-.brand-text .name{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.06em}
-.brand-text .sub{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ink3);text-transform:uppercase;margin-top:2px}
-nav ul{list-style:none;display:flex;gap:36px;align-items:center}
-nav ul a{font-size:.85rem;font-weight:500;position:relative;padding:4px 0}
-nav ul a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--easeOut)}
-nav ul a:hover::after{transform:scaleX(1)}
-nav .cta{padding:12px 22px;background:var(--ink);color:var(--bg);border-radius:999px;font-weight:700;font-size:.85rem;display:inline-flex;align-items:center;gap:8px;transition:background .3s,color .3s;position:relative;overflow:hidden}
-nav .cta:hover{background:var(--blue);color:var(--bg)}
-nav .cta::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 12px var(--blue);animation:pulse 1.6s ease infinite}
-nav .cta:hover::before{background:var(--bg);box-shadow:0 0 12px var(--bg)}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-@media(max-width:900px){nav ul li:not(.call-li){display:none}.brand-text .sub{display:none}}
-@media(max-width:600px){nav.top{padding:16px 22px}nav.top.scrolled{padding:12px 22px}nav ul .call-li{display:none}.brand-mark{width:40px;height:40px;font-size:1.2rem}.brand-text .name{font-size:1.1rem}}
-.hero{min-height:100vh;padding:0;position:relative;overflow:hidden;display:flex;flex-direction:column}
-.hero-bg{position:absolute;inset:0;z-index:0;background:var(--bg)}
-.aurora{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block;pointer-events:none}
-.hero-bg::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(7,8,10,.4) 0%,rgba(7,8,10,.1) 30%,rgba(7,8,10,.4) 70%,var(--bg) 100%),linear-gradient(90deg,rgba(7,8,10,.6) 0%,transparent 55%)}
-.wheel3d{position:absolute;top:50%;right:-15%;width:min(110vh,1300px);height:min(110vh,1300px);transform:translateY(-50%);z-index:2;pointer-events:none;opacity:0;transition:opacity 1.4s var(--easeOut) 1.8s;filter:drop-shadow(0 30px 80px rgba(47,125,255,.3))}
-.js .wheel3d{opacity:1}
-@media(max-width:900px){.wheel3d{width:min(70vh,600px);height:min(70vh,600px);right:-30%}.js .wheel3d{opacity:.55}}
-@media(max-width:600px){.wheel3d{width:min(60vh,400px);height:min(60vh,400px);right:-50%}.js .wheel3d{opacity:.4}}
-@media(max-width:400px){.wheel3d{width:min(50vh,300px);height:min(50vh,300px);right:-60%}.js .wheel3d{opacity:.3}}
-.hero-content{position:relative;z-index:3;width:100%;padding:240px 0 100px;margin-top:auto}
-@media(max-width:800px){.hero-content{padding:170px 0 80px}}
-.hero h1{font-size:clamp(2rem,8.5vw,7rem);margin:0;max-width:100%;overflow-wrap:break-word;word-break:break-word;line-height:.95}
-.hero h1 .line{display:block;overflow:hidden;line-height:1;padding-bottom:.1em}
-.hero h1 .char{display:inline-block;transform:translateY(110%)}
-.js .hero h1 .char{animation:charRise 1.1s var(--ease) forwards;animation-delay:calc(.025s * var(--i,0) + 1.9s)}
-@keyframes charRise{to{transform:translateY(0)}}
-.hero h1 .line.l1 .char{text-shadow:0 1px 0 #c5c6cc,0 2px 0 #a8a9af,0 3px 0 #8a8b94,0 4px 0 #6c6d75,0 5px 0 #4e4f56,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15)}
-.hero h1 .line.l2 .char{color:var(--blue);text-shadow:0 1px 0 #2470e6,0 2px 0 #1a64cc,0 3px 0 #1058b3,0 4px 0 #054c99,0 5px 0 #003f80,0 6px 1px rgba(47,125,255,.3),0 0 5px rgba(47,125,255,.3),0 1px 3px rgba(0,0,0,.4),0 3px 5px rgba(0,0,0,.3),0 5px 10px rgba(0,0,0,.3),0 10px 10px rgba(47,125,255,.2),0 20px 20px rgba(47,125,255,.15)}
-.hero h1 .line.l3 .char{-webkit-text-stroke:2px var(--ink);color:transparent;text-shadow:none}
-.hero-sub{margin-top:50px;display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:end}
-.hero-sub p{font-size:clamp(1rem,1.2vw,1.2rem);color:var(--ink2);max-width:540px;font-weight:300}
-.js .hero-sub p{opacity:0;animation:fade .8s ease 2.5s forwards}
-.js .hero-cta-stack{opacity:0;animation:fade .8s ease 2.7s forwards}
-@keyframes fade{to{opacity:1}}
-.btn{display:inline-flex;align-items:center;justify-content:space-between;width:100%;padding:18px 26px;background:var(--ink);color:var(--bg);font-weight:700;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;transition:transform .3s var(--easeOut),color .3s;position:relative;overflow:hidden;will-change:transform}
-.btn::after{content:'';position:absolute;top:50%;left:50%;width:0;height:0;border-radius:50%;background:var(--blue);transform:translate(-50%,-50%);transition:width .6s var(--easeOut),height .6s var(--easeOut);z-index:0}
-.btn:hover::after{width:600px;height:600px}
-.btn>span{position:relative;z-index:1;transition:color .3s ease}
-.btn:hover>span{color:var(--bg)}
-.btn .arrow{width:36px;height:36px;border-radius:50%;background:var(--bg);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;margin-left:16px;transition:transform .4s var(--easeOut);position:relative;z-index:1}
-.btn:hover .arrow{transform:rotate(-45deg);background:var(--ink);color:var(--bg)}
-.btn-ghost{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.25);margin-top:12px}
-.btn-ghost::after{background:rgba(255,255,255,.1)}
-.btn-ghost .arrow{background:var(--ink);color:var(--bg)}
-.btn-ghost:hover{border-color:var(--ink)}
-@media(max-width:800px){.hero-sub{grid-template-columns:1fr;gap:30px}}
-.marquee-bar{position:relative;z-index:3;padding:18px 0;background:var(--bg);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);overflow:hidden;white-space:nowrap}
-.marquee-track{display:inline-flex;gap:50px;align-items:center;animation:scroll 32s linear infinite}
-.marquee-track .item{display:inline-flex;align-items:center;gap:50px;font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.1em;color:var(--ink)}
-.marquee-track .item.alt{color:var(--ink4);-webkit-text-stroke:1px var(--ink);-webkit-text-fill-color:transparent}
-.marquee-track .dot{width:8px;height:8px;background:var(--blue);border-radius:50%;flex-shrink:0;box-shadow:0 0 8px var(--blue)}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.specs{background:var(--bg);padding:80px 0;border-bottom:1px solid rgba(255,255,255,.05)}
-.specs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.spec{padding:30px 36px;border-right:1px solid rgba(255,255,255,.06);position:relative}
-.spec:last-child{border-right:none}
-.spec .label{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink3);margin-bottom:18px;display:flex;align-items:center;gap:8px}
-.spec .label::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%}
-.spec .value{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,4.2rem);line-height:1;letter-spacing:.02em;min-height:1em}
-.spec .value .small{font-size:.4em;color:var(--blue);margin-left:6px}
-.spec .value .scramble{display:inline-block;font-variant-numeric:tabular-nums}
-.spec .note{font-size:.78rem;color:var(--ink3);margin-top:8px}
-@media(max-width:900px){.specs-grid{grid-template-columns:repeat(2,1fr)}.spec:nth-child(2){border-right:none}.spec:nth-child(1),.spec:nth-child(2){border-bottom:1px solid rgba(255,255,255,.06)}}
-.js .reveal{opacity:0;transform:translateY(40px);transition:opacity 1.2s var(--easeOut),transform 1.2s var(--easeOut)}
-.js .reveal.in{opacity:1;transform:translateY(0)}
-.js .reveal-delay-1{transition-delay:.15s}
-.js .reveal-delay-2{transition-delay:.3s}
-.js .reveal-delay-3{transition-delay:.45s}
-@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.js .hero h1 .char{transform:none;animation:none}}
-.idle .hero .btn:first-child{animation:idleAttn 2.4s ease-in-out infinite}
-.idle .float-call{animation:idleAttn 2.4s ease-in-out infinite}
-@keyframes idleAttn{0%,100%{box-shadow:0 0 0 0 rgba(47,125,255,0),0 10px 40px rgba(47,125,255,.4)}50%{box-shadow:0 0 0 14px rgba(47,125,255,0),0 10px 40px rgba(47,125,255,.5)}}
-</style>
 </head>
 <body>
 <div class="intro" aria-hidden="true">
-  <div class="intro-grid"></div>
-  <div class="intro-glow"></div>
-  <div class="intro-c tl">N 33.6996° · W 117.9970°</div>
-  <div class="intro-c tr">Online · Huntington Beach</div>
-  <div class="intro-c bl">RPM / EST. 2013</div>
-  <div class="intro-c br">SYS / v2.5</div>
-  <div class="intro-mark">
-    <span class="row">Powered</span>
-    <span class="row">By</span>
-    <span class="row">RPM</span>
-  </div>
-  <div class="intro-bar"></div>
-  <div class="intro-tag">Initializing telemetry</div>
+<div class="intro-grid"></div><div class="intro-glow"></div>
+<div class="intro-c tl">N 33.6996° · W 117.9970°</div>
+<div class="intro-c tr">Online · Huntington Beach</div>
+<div class="intro-c bl">RPM / EST. 2013</div>
+<div class="intro-c br">SYS / v2.5</div>
+<div class="intro-mark"><span class="row">Powered</span><span class="row">By</span><span class="row">RPM</span></div>
+<div class="intro-bar"></div>
+<div class="intro-tag">Initializing telemetry</div>
 <button type="button" class="intro-skip" id="introSkip" aria-label="Skip intro">Skip Intro →</button>
 </div>
-<a href="#top" class="skip-link">Skip to content</a>
+<a href="#main" class="skip-link">Skip to content</a>
 <div class="scroll-progress" id="scrollProgress"></div>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-dot" id="cursorDot"></div>
-<svg width="0" height="0" style="position:fixed;left:-9999px" aria-hidden="true">
-  <defs>
-    <filter id="gooFilter">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
-      <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" result="goo"/>
-      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-    </filter>
-  </defs>
-</svg>
-<svg class="goo-cursor" id="gooCursor" viewBox="0 0 200 200" aria-hidden="true">
-  <g>
-    <circle class="gb gb1" cx="100" cy="100" r="14" fill="#2f7dff"/>
-    <circle class="gb gb2" cx="100" cy="100" r="10" fill="#5aa0ff"/>
-    <circle class="gb gb3" cx="100" cy="100" r="7" fill="#2f7dff"/>
-    <circle class="gb gb4" cx="100" cy="100" r="5" fill="#5aa0ff"/>
-  </g>
-</svg>
-<nav class="section-dots" id="sectionDots" aria-label="Section navigation">
-  <a href="#top" data-label="Top" data-section="top" class="active"></a>
-  <a href="#about" data-label="Story" data-section="about"></a>
-  <a href="#services" data-label="Work" data-section="services"></a>
-  <a href="#shop" data-label="Shop" data-section="shop"></a>
-  <a href="#specialty" data-label="BRZ / 86" data-section="specialty"></a>
-  <a href="#reviews" data-label="Reviews" data-section="reviews"></a>
-  <a href="#visit" data-label="Visit" data-section="visit"></a>
-</nav>
+<svg width="0" height="0" style="position:fixed;left:-9999px" aria-hidden="true"><defs><filter id="gooFilter"><feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/><feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" result="goo"/><feComposite in="SourceGraphic" in2="goo" operator="atop"/></filter></defs></svg>
+<svg class="goo-cursor" id="gooCursor" viewBox="0 0 200 200" aria-hidden="true"><g><circle class="gb gb1" cx="100" cy="100" r="14" fill="#2f7dff"/><circle class="gb gb2" cx="100" cy="100" r="10" fill="#5aa0ff"/><circle class="gb gb3" cx="100" cy="100" r="7" fill="#2f7dff"/><circle class="gb gb4" cx="100" cy="100" r="5" fill="#5aa0ff"/></g></svg>
 <nav class="top" id="topNav" aria-label="Primary navigation">
-  <a href="#top" class="brand" aria-label="Powered By RPM home">
-    <div class="brand-mark">RPM</div>
-    <div class="brand-text">
-      <span class="name">Powered By RPM</span>
-      <span class="sub">Racing Performance Motorsport</span>
-    </div>
-  </a>
-  <ul>
-    <li><a href="#about">Story</a></li>
-    <li><a href="#services">Work</a></li>
-    <li><a href="#shop">Shop</a></li>
-    <li><a href="#specialty">BRZ / 86</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#visit">Visit</a></li>
-    <li class="call-li"><a href="tel:+17143970820" class="cta magnetic">(714) 397-0820</a></li>
-  </ul>
+<a href="#home" data-tab="home" class="brand" aria-label="Powered By RPM home"><div class="brand-mark">RPM</div><div class="brand-text"><span class="name">Powered By RPM</span><span class="sub">Racing Performance Motorsport</span></div></a>
+<ul>
+<li><a href="#home" data-tab="home" class="active">Home</a></li>
+<li><a href="#work" data-tab="work">Work</a></li>
+<li><a href="#shop" data-tab="shop">Shop</a></li>
+<li><a href="#visit" data-tab="visit">Visit</a></li>
+<li class="call-li"><a href="tel:+17143970820" class="cta magnetic">(714) 397-0820</a></li>
+</ul>
 </nav>
+<main id="main">
+
+<!-- HOME TAB -->
+<div id="tab-home" class="tab-panel active">
 <section class="hero" id="top">
-  <div class="hero-bg"></div>
-  <canvas class="aurora" id="aurora"></canvas>
-  <canvas class="wheel3d" id="wheel3d"></canvas>
-  <div class="container hero-content">
-    <h1 class="display" id="heroHeadline">
-      <span class="line l1" data-text="The Shop"></span>
-      <span class="line l2" data-text="Everyone Tells"></span>
-      <span class="line l3" data-text="You About."></span>
-    </h1>
-    <div class="hero-sub">
-      <p>Subaru, BRZ, and GR86 performance done right. Honest work, expert install, and a reputation that brings customers driving 30 miles past every other shop to get here.</p>
-      <div class="hero-cta-stack">
-        <a href="tel:+17143970820" class="btn magnetic"><span>Call RPM</span><span class="arrow">↗</span></a>
-        <a href="#services" class="btn btn-ghost magnetic"><span>See The Work</span><span class="arrow">→</span></a>
-      </div>
-    </div>
-  </div>
+<div class="hero-bg"></div>
+<canvas class="aurora" id="aurora"></canvas>
+<canvas class="wheel3d" id="wheel3d"></canvas>
+<div class="container hero-content">
+<h1 class="display" id="heroHeadline">
+<span class="line l1" data-text="The Shop"></span>
+<span class="line l2" data-text="Everyone Tells"></span>
+<span class="line l3" data-text="You About."></span>
+</h1>
+<div class="hero-sub">
+<p>Subaru, BRZ, and GR86 performance done right. Honest work, expert install, and a reputation that brings customers driving 30 miles past every other shop to get here.</p>
+<div class="hero-cta-stack">
+<a href="tel:+17143970820" class="btn magnetic"><span>Call RPM</span><span class="arrow">↗</span></a>
+<a href="#work" data-tab="work" class="btn btn-ghost magnetic"><span>See The Work</span><span class="arrow">→</span></a>
+</div></div></div>
 </section>
 <div class="marquee-bar"><div class="marquee-track">
 <span class="item">SUBARU SPECIALISTS <span class="dot"></span></span>
@@ -272,8 +77,6 @@ nav .cta:hover::before{background:var(--bg);box-shadow:0 0 12px var(--bg)}
 <span class="item alt">BRZ / 86 BUILDS <span class="dot"></span></span>
 <span class="item">500+ HORSEPOWER <span class="dot"></span></span>
 <span class="item alt">CRAWFORD AUTHORIZED <span class="dot"></span></span>
-<span class="item">TURBO &amp; FORCED INDUCTION <span class="dot"></span></span>
-<span class="item alt">DYNO TUNED <span class="dot"></span></span>
 </div></div>
 <section class="specs">
 <div class="container"><div class="specs-grid">
@@ -282,266 +85,9 @@ nav .cta:hover::before{background:var(--bg);box-shadow:0 0 12px var(--bg)}
 <div class="spec reveal reveal-delay-2"><div class="label">Google Rating</div><div class="value"><span class="scramble" data-target="4.7" data-decimal="1">4.7</span></div><div class="note">Across 14+ verified reviews</div></div>
 <div class="spec reveal reveal-delay-3"><div class="label">Partners</div><div class="value"><span class="scramble" data-target="5">5</span></div><div class="note">Crawford · ACT · ETS · APR · Koyo</div></div>
 </div></div></section>
-<style>
-.about{background:var(--bg);padding:180px 0;position:relative}
-.about-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:60px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}
-.about-row .num{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.3em;color:var(--ink3)}
-.about-headline{font-size:clamp(3rem,8vw,8rem);margin-bottom:80px;max-width:1200px}
-.about-headline .em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;letter-spacing:-.02em;color:var(--blue)}
-.about-body{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
-.about-left{position:sticky;top:120px}
-.about-tag{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink3);padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:14px}
-.about-quote{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);line-height:1.05;letter-spacing:.01em}
-.about-quote .blue{color:var(--blue)}
-.about-author{font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.15em;color:var(--ink3);margin-top:24px}
-.about-right p{color:var(--ink2);font-size:1.08rem;line-height:1.8;margin-bottom:28px;font-weight:300}
-.about-right p strong{color:var(--ink);font-weight:600}
-.about-right .drop::first-letter{font-family:'Bebas Neue',sans-serif;font-size:5rem;float:left;line-height:.85;margin:6px 14px 0 0;color:var(--blue)}
-.about-right p .pull{display:block;padding:30px 32px;margin:40px 0;background:linear-gradient(135deg,rgba(47,125,255,.08) 0%,rgba(47,125,255,.02) 100%);border-left:3px solid var(--blue);font-family:'Bebas Neue',sans-serif;font-size:1.8rem;line-height:1.15;letter-spacing:.02em;color:var(--ink)}
-@media(max-width:900px){.about-body{grid-template-columns:1fr;gap:50px}.about-left{position:static}}
-.services{background:var(--bg2);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);padding:160px 0}
-.services-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:80px}
-.services-head h2{font-size:clamp(3rem,7vw,7rem)}
-.services-head p{color:var(--ink2);max-width:460px}
-.services-list{display:flex;flex-direction:column}
-.service-row{display:grid;grid-template-columns:80px 1fr 80px;gap:40px;align-items:center;padding:36px 0;border-top:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;transition:padding .5s var(--easeOut);text-decoration:none;color:inherit}
-.service-row:last-child{border-bottom:1px solid rgba(255,255,255,.08)}
-.service-row::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,rgba(47,125,255,.06) 0%,transparent 60%);opacity:0;transition:opacity .5s ease}
-.service-row:hover{padding:54px 0}
-.service-row:hover::before{opacity:1}
-.service-row .num{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--ink3);letter-spacing:.15em;position:relative;z-index:2;transition:color .3s ease}
-.service-row:hover .num{color:var(--blue)}
-.service-row .name{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,3.5vw,3.5rem);letter-spacing:.02em;position:relative;z-index:2;transition:transform .5s var(--easeOut),color .3s ease}
-.service-row:hover .name{transform:translateX(24px)}
-.service-row .arr{position:relative;z-index:2;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;justify-self:end;transition:all .5s var(--easeOut);color:var(--ink3)}
-.service-row:hover .arr{background:var(--blue);border-color:var(--blue);color:var(--bg);transform:rotate(-45deg)}
-.service-row .desc{grid-column:2;grid-row:2;max-height:0;overflow:hidden;color:var(--ink2);font-size:.98rem;transition:max-height .5s ease,padding .5s ease}
-.service-row:hover .desc{max-height:200px;padding-top:16px}
-@media(max-width:700px){.service-row{grid-template-columns:50px 1fr 40px;gap:16px;padding:26px 0}.service-row:hover{padding:36px 0}.service-row:hover .desc{max-height:240px}}
-
-.pullquote{background:radial-gradient(ellipse 60% 80% at 80% 30%,rgba(47,125,255,.12) 0%,transparent 60%),radial-gradient(ellipse 50% 70% at 10% 90%,rgba(47,125,255,.06) 0%,transparent 60%),var(--bg);padding:180px 0;position:relative;overflow:hidden}
-.pullquote::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(47,125,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(47,125,255,.04) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 0%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center,black 0%,transparent 70%);pointer-events:none}
-.pq-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;text-align:center}
-.pq-mark{width:60px;height:48px;color:var(--blue);margin:0 auto 36px;opacity:.9}
-.pq-text{font-size:clamp(1.8rem,4.5vw,4.2rem);line-height:1.15;letter-spacing:.01em;margin-bottom:50px;font-family:'Bebas Neue',sans-serif}
-.pq-text .em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;letter-spacing:-.02em;color:var(--blue)}
-.pq-author{display:inline-flex;align-items:center;gap:16px;padding:16px 24px 16px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:999px;text-align:left;backdrop-filter:blur(10px)}
-.pq-avatar{width:44px;height:44px;border-radius:50%;background:var(--blue);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem}
-.pq-name{font-weight:600;font-size:.98rem}
-.pq-meta{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.15em;color:var(--ink3);margin-top:4px;text-transform:uppercase}
-.specialty{background:var(--bg);padding:180px 0;position:relative;overflow:hidden}
-.specialty::before{content:'';position:absolute;top:-200px;right:-200px;width:800px;height:800px;background:radial-gradient(circle,rgba(47,125,255,.1) 0%,transparent 60%);pointer-events:none}
-.specialty-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:2}
-.gauge-wrap{position:relative;aspect-ratio:1/1}
-.gauge-wrap svg{width:100%;height:100%}
-.gauge-bg{fill:none;stroke:rgba(255,255,255,.06);stroke-width:1}
-.gauge-tick{stroke:var(--ink3);stroke-width:1.5}
-.gauge-tick.major{stroke:var(--ink);stroke-width:2}
-.gauge-tick.red{stroke:var(--hot);stroke-width:2.5}
-.gauge-num{font-family:'JetBrains Mono',monospace;font-size:11px;fill:var(--ink3)}
-.gauge-arc{fill:none;stroke:var(--blue);stroke-width:4;stroke-linecap:round;stroke-dasharray:1000;stroke-dashoffset:1000;transition:stroke-dashoffset .3s linear;filter:drop-shadow(0 0 8px rgba(47,125,255,.5))}
-.gauge-needle{stroke:var(--ink);stroke-width:3;stroke-linecap:round;transform-origin:center;transform:rotate(-135deg);transition:transform .2s linear;filter:drop-shadow(0 0 6px rgba(244,244,246,.4))}
-.gauge-center{fill:var(--ink)}
-.gauge-readout{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
-.gauge-readout .big{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,8vw,7rem);line-height:1;color:var(--ink);font-variant-numeric:tabular-nums;min-width:4ch;text-align:center}
-.gauge-readout .unit{font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.3em;color:var(--blue);margin-top:6px}
-.gauge-readout .label{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.25em;color:var(--ink3);margin-top:18px;text-transform:uppercase}
-.specialty-text .tag{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:20px}
-.specialty-text h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,6vw,5.5rem);line-height:.95;margin-bottom:28px}
-.specialty-text h3 .em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;letter-spacing:-.02em;color:var(--blue)}
-.specialty-text p{color:var(--ink2);font-size:1.05rem;line-height:1.7;margin-bottom:20px;font-weight:300}
-.specialty-text .build-spec{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin:32px 0;padding:28px 0;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
-.specialty-text .build-spec div .k{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.2em;color:var(--ink3);text-transform:uppercase}
-.specialty-text .build-spec div .v{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;margin-top:6px}
-@media(max-width:900px){.specialty-grid{grid-template-columns:1fr;gap:60px}}
-.builds-section{position:relative;background:var(--bg);padding:180px 0 100px}
-.builds-sticky{position:relative;display:flex;flex-direction:column}
-.builds-head{position:relative;display:flex;justify-content:space-between;align-items:center;padding:0 40px;z-index:5;margin-bottom:60px;max-width:1400px;margin-left:auto;margin-right:auto;width:100%}
-.builds-head .lbl{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--blue)}
-.builds-head .lbl::before{content:'';display:inline-block;width:24px;height:1px;background:var(--blue);margin-right:12px;vertical-align:middle}
-.builds-head .counter{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.25em;color:var(--ink3)}
-.builds-head .counter b{color:var(--ink);font-weight:500}
-.builds-track{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;padding:0 40px;max-width:1400px;margin:0 auto;width:100%}
-.build-slide:hover{transform:translateY(-6px);border-color:rgba(47,125,255,.3);box-shadow:0 30px 80px rgba(47,125,255,.18)}
-.build-slide{width:100%;min-height:540px;border-radius:20px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:50px;border:1px solid rgba(255,255,255,.06);transition:transform .4s var(--easeOut),border-color .3s,box-shadow .4s}
-.build-slide::before{content:'';position:absolute;inset:0;z-index:0}
-.build-slide.s1::before{background:radial-gradient(ellipse 80% 100% at 30% 70%,rgba(47,125,255,.4) 0%,transparent 60%),linear-gradient(135deg,#0b3a8a 0%,#06070a 60%)}
-.build-slide.s2::before{background:radial-gradient(ellipse 80% 100% at 70% 30%,rgba(255,58,69,.35) 0%,transparent 60%),linear-gradient(135deg,#2a0b14 0%,#06070a 60%)}
-.build-slide.s3::before{background:radial-gradient(ellipse 80% 100% at 50% 50%,rgba(90,160,255,.45) 0%,transparent 60%),linear-gradient(135deg,#1a1d28 0%,#06070a 60%)}
-.build-slide.s4::before{background:radial-gradient(ellipse 80% 100% at 40% 60%,rgba(217,181,106,.3) 0%,transparent 60%),linear-gradient(135deg,#1a1407 0%,#06070a 60%)}
-.build-slide::after{content:'';position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 0%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse at center,black 0%,transparent 80%)}
-.build-slide>*{position:relative;z-index:2}
-.build-slide .b-num{font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.3em;color:var(--ink3);margin-bottom:20px}
-.build-slide .b-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,7vw,6.5rem);line-height:.92;letter-spacing:.02em;margin-bottom:24px}
-.build-slide .b-name .em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--blue2)}
-.build-slide .b-desc{font-size:1.05rem;line-height:1.7;color:var(--ink2);max-width:520px;margin-bottom:32px;font-weight:300}
-.build-slide .b-specs{display:flex;gap:32px;flex-wrap:wrap}
-.build-slide .b-specs div{display:flex;flex-direction:column;gap:4px}
-.build-slide .b-specs .k{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3)}
-.build-slide .b-specs .v{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--ink)}
-.build-slide .b-tag{position:absolute;top:32px;right:32px;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--blue);padding:6px 14px;border:1px solid rgba(47,125,255,.4);border-radius:999px;background:rgba(7,8,10,.5);backdrop-filter:blur(6px);z-index:3}
-.builds-progress{display:none}
-.builds-progress .seg{flex:1;height:3px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden;position:relative}
-.builds-progress .seg::after{content:'';position:absolute;left:0;top:0;height:100%;width:0;background:var(--blue);box-shadow:0 0 8px var(--blue);transition:width .2s ease}
-.builds-progress .seg.fill::after{width:100%}
-.builds-progress .seg.active::after{width:var(--p,0)}
-@media(max-width:800px){.builds-section{padding:90px 0}.builds-track{grid-template-columns:1fr;gap:24px;padding:0 22px}.build-slide{min-height:480px;padding:40px}.builds-head{padding:0 22px;margin-bottom:40px}}
-.reviews{background:var(--bg2);padding:180px 0;border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}
-.reviews-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:80px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}
-.reviews-head h2{font-size:clamp(2.8rem,6vw,6rem)}
-.reviews-head .right{text-align:right}
-.reviews-head .stars{font-size:1.5rem;color:#ffc659;letter-spacing:.1em}
-.reviews-head .score{font-family:'Bebas Neue',sans-serif;font-size:4rem;line-height:1;margin-top:8px}
-.reviews-head .score .of{color:var(--ink3);font-size:.5em}
-.reviews-head .meta{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.2em;color:var(--ink3);margin-top:8px}
-.reviews-track{display:flex;overflow:hidden;perspective:1400px;position:relative;mask-image:linear-gradient(90deg,transparent 0%,black 4%,black 96%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,black 4%,black 96%,transparent 100%)}
-.reviews-strip{display:flex;gap:24px;flex-shrink:0;padding-right:24px;animation:rstrip 80s linear infinite}
-.reviews-track:hover .reviews-strip{animation-play-state:paused}
-.review{flex-shrink:0;width:min(440px,85vw);background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(255,255,255,.01));padding:44px;border:1px solid rgba(255,255,255,.06);border-radius:var(--r);position:relative;overflow:hidden;transform-style:preserve-3d;transition:transform .6s var(--easeOut),border-color .3s,box-shadow .4s;will-change:transform;backdrop-filter:blur(12px)}
-.review::before{content:'';position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:0;transition:opacity .3s ease}
-.review:hover{border-color:rgba(47,125,255,.3);box-shadow:0 30px 80px rgba(47,125,255,.15)}
-.review:hover::before{opacity:1}
-.review .quote{font-family:'Bebas Neue',sans-serif;font-size:5rem;line-height:.5;color:var(--blue);margin-bottom:16px;display:block;height:30px}
-.review p{font-family:'Inter',sans-serif;font-weight:300;font-size:1.08rem;line-height:1.7;color:var(--ink);margin-bottom:28px;font-style:italic}
-.review .author{display:flex;align-items:center;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(255,255,255,.06)}
-.review .auth-left{display:flex;align-items:center;gap:14px}
-.review .avatar{width:42px;height:42px;border-radius:50%;background:var(--blue);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.1rem}
-.review .name{font-weight:600;font-size:.95rem}
-.review .src{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.15em;color:var(--ink3);text-transform:uppercase}
-.review .stars-sm{color:#ffc659;font-size:.8rem;letter-spacing:.1em}
-@keyframes rstrip{from{transform:translateX(0)}to{transform:translateX(-100%)}}
-@media(max-width:800px){.reviews-track{flex-direction:column;mask-image:none;-webkit-mask-image:none;perspective:none}.reviews-strip{flex-direction:column;animation:none;padding-right:0;width:100%}.reviews-strip.dup{display:none}.review{width:100%;transform:none!important}.reviews-head{grid-template-columns:1fr;align-items:start}.reviews-head .right{text-align:left}}
-.brands{background:var(--bg);padding:120px 0}
-.brands-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:60px;flex-wrap:wrap;gap:20px}
-.brands-head h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:.02em}
-.brands-grid{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);overflow:hidden;perspective:800px}
-.brands-grid .brand{aspect-ratio:1.8/1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;border-right:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;transition:background .3s ease,transform .5s var(--easeOut);transform-style:preserve-3d;will-change:transform}
-.brands-grid .brand:last-child{border-right:none}
-.brands-grid .brand:hover{background:var(--bg2)}
-.brands-grid .brand .name{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.06em;color:var(--ink);transition:color .3s ease}
-.brands-grid .brand:hover .name{color:var(--blue)}
-.brands-grid .brand .sub{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ink3);margin-top:6px;text-transform:uppercase}
-.brands-grid .brand .badge{position:absolute;top:12px;right:12px;font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.2em;color:var(--blue);padding:4px 8px;border:1px solid rgba(47,125,255,.4);border-radius:999px}
-@media(max-width:900px){.brands-grid{grid-template-columns:repeat(2,1fr);perspective:none}.brands-grid .brand{transform:none!important;border-bottom:1px solid rgba(255,255,255,.08)}.brands-grid .brand:nth-child(odd){border-right:1px solid rgba(255,255,255,.08)}.brands-grid .brand:nth-child(even){border-right:none}}
-.financing{background:var(--bg);padding:120px 0}
-.fin-card{position:relative;background:linear-gradient(135deg,var(--blueDeep) 0%,var(--bg) 100%);border-radius:var(--r);overflow:hidden;padding:80px 60px;display:grid;grid-template-columns:1.5fr 1fr;gap:60px;align-items:center}
-.fin-card::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);background-size:26px 26px;mask-image:radial-gradient(ellipse at 80% 50%,black 0%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 80% 50%,black 0%,transparent 70%)}
-.fin-text{position:relative;z-index:2}
-.fin-text h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);margin:12px 0 20px;line-height:.95}
-.fin-text p{color:var(--ink2);max-width:480px}
-.fin-cta{position:relative;z-index:2;text-align:right}
-.fin-cta .big{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,9vw,7rem);line-height:1;color:var(--ink)}
-.fin-cta .big .sm{color:var(--blue2);font-size:.4em}
-.fin-cta .terms{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.2em;color:var(--ink2);text-transform:uppercase;margin:6px 0 24px}
-.fin-cta .btn{width:auto;padding:16px 24px}
-@media(max-width:900px){.fin-card{grid-template-columns:1fr;padding:50px 30px;text-align:left}.fin-cta{text-align:left}}
-
-.shop{background:var(--bg2);padding:180px 0;position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
-.shop::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(47,125,255,.08) 0%,transparent 60%);pointer-events:none}
-.shop-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:60px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}
-.shop-head h2{font-size:clamp(2.8rem,6.5vw,6.5rem)}
-.shop-head h2 .em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--blue)}
-.shop-head .meta{text-align:right;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.2em;color:var(--ink3);text-transform:uppercase}
-.shop-head .secure{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(47,125,255,.3);border-radius:999px;color:var(--blue);margin-top:8px}
-.shop-head .secure svg{width:12px;height:12px;fill:currentColor}
-.shop-head .ig-shop-link{display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:10px 18px;background:linear-gradient(135deg,#833AB4,#FD1D1D,#FCB045);background-size:200% 200%;color:var(--ink);border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;transition:transform .3s var(--easeOut),box-shadow .3s;animation:igGradient 6s ease infinite}
-.shop-head .ig-shop-link:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(253,29,93,.35)}
-.shop-head .ig-shop-link svg{width:14px;height:14px;fill:currentColor}
-@keyframes igGradient{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-.shop-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.05)}
-.shop-filter{padding:12px 22px;min-height:44px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);cursor:none;transition:all .3s var(--easeOut);font-weight:600;display:inline-flex;align-items:center}
-.shop-filter:hover{background:rgba(47,125,255,.08);border-color:rgba(47,125,255,.3);color:var(--blue2)}
-.shop-filter.active{background:var(--blue);border-color:var(--blue);color:var(--bg);box-shadow:0 0 18px rgba(47,125,255,.4)}
-.shop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.product-card{background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.06);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .5s var(--easeOut),border-color .3s,box-shadow .4s;will-change:transform;backdrop-filter:blur(10px)}
-.product-card:hover{transform:translateY(-4px);border-color:rgba(47,125,255,.35);box-shadow:0 30px 70px rgba(47,125,255,.15)}
-.product-img{aspect-ratio:1/1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(255,255,255,.05)}
-.product-img::before{content:'';position:absolute;inset:0;z-index:0}
-.product-img.c1::before{background:radial-gradient(ellipse 80% 100% at 30% 70%,rgba(47,125,255,.35) 0%,transparent 60%),linear-gradient(135deg,#0b3a8a 0%,#06070a 70%)}
-.product-img.c2::before{background:radial-gradient(ellipse 80% 100% at 70% 30%,rgba(255,58,69,.25) 0%,transparent 60%),linear-gradient(135deg,#1a0810 0%,#06070a 70%)}
-.product-img.c3::before{background:radial-gradient(ellipse 80% 100% at 50% 50%,rgba(90,160,255,.35) 0%,transparent 60%),linear-gradient(135deg,#0d1a2a 0%,#06070a 70%)}
-.product-img.c4::before{background:radial-gradient(ellipse 80% 100% at 40% 60%,rgba(217,181,106,.22) 0%,transparent 60%),linear-gradient(135deg,#1a1407 0%,#06070a 70%)}
-.product-img::after{content:'';position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse at center,black 0%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse at center,black 0%,transparent 80%)}
-.product-img svg{position:relative;z-index:2;width:50%;height:50%;stroke:rgba(244,244,246,.9);stroke-width:1.2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .6s var(--easeOut),stroke .3s}
-.product-card:hover .product-img svg{transform:scale(1.1) rotate(-3deg);stroke:var(--blue2)}
-.product-badge{position:absolute;top:14px;left:14px;z-index:3;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.2em;color:var(--bg);background:var(--blue);padding:4px 10px;border-radius:999px;text-transform:uppercase;font-weight:700}
-.product-badge.new{background:#2bff5a;color:var(--bg)}
-.product-badge.sale{background:var(--hot)}
-.product-tag{position:absolute;top:14px;right:14px;z-index:3;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.18em;color:var(--blue);background:rgba(7,8,10,.7);backdrop-filter:blur(6px);padding:5px 10px;border:1px solid rgba(47,125,255,.3);border-radius:999px;text-transform:uppercase}
-.product-info{padding:24px;display:flex;flex-direction:column;flex:1;gap:8px}
-.product-info .brand{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.25em;color:var(--ink3);text-transform:uppercase}
-.product-info h3{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.04em;line-height:1.1;color:var(--ink);min-height:2.4em}
-.product-info .desc{font-size:.85rem;color:var(--ink3);line-height:1.5;font-weight:300;min-height:2.6em}
-.product-meta{display:flex;justify-content:space-between;align-items:flex-end;margin-top:12px;padding-top:18px;border-top:1px solid rgba(255,255,255,.05)}
-.product-price{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:.02em;color:var(--ink);line-height:1}
-.product-price .cents{font-size:.55em;color:var(--ink3);vertical-align:top;margin-left:2px}
-.product-price .old{font-size:.6em;color:var(--ink4);text-decoration:line-through;margin-right:8px}
-.product-buy{padding:12px 20px;min-height:40px;background:var(--ink);color:var(--bg);border-radius:999px;font-weight:700;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;transition:transform .3s var(--easeOut),background .3s,color .3s;cursor:none}
-.product-buy:hover{background:var(--blue);transform:translateY(-2px)}
-.product-buy svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2}
-.shop-foot{margin-top:50px;padding-top:30px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.shop-foot .stripe-badge{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.2em;color:var(--ink3);text-transform:uppercase}
-.shop-foot .stripe-badge svg{width:38px;height:16px;fill:currentColor}
-.shop-foot .note{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.18em;color:var(--ink3);text-transform:uppercase}
-.shop-foot .note a{color:var(--blue);font-weight:600}
-@keyframes prodPulse{0%,100%{opacity:.4}50%{opacity:1}}
-.product-card.coming-soon{position:relative}
-.product-card.coming-soon .product-buy{background:rgba(255,255,255,.08);color:var(--ink2);pointer-events:auto}
-.product-card.coming-soon .product-buy:hover{background:rgba(47,125,255,.15);color:var(--blue2);transform:none}
-@media(max-width:1100px){.shop-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:900px){.shop-grid{grid-template-columns:repeat(2,1fr)}.shop-head{grid-template-columns:1fr;gap:30px}.shop-head .meta{text-align:left}}
-@media(max-width:500px){.shop-grid{grid-template-columns:1fr}}
-.hide{display:none!important}
-.contact{background:var(--bg2);padding:160px 0 100px;border-top:1px solid rgba(255,255,255,.04)}
-.contact-head{margin-bottom:80px}
-.contact-head h2{font-size:clamp(3rem,7vw,7rem);margin:20px 0}
-.contact-head h2 .em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;letter-spacing:-.02em;color:var(--blue)}
-.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:50px}
-.contact-cards{display:grid;gap:16px}
-.contact-card{background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.06);border-radius:var(--r);padding:28px 32px;transition:all .3s ease;backdrop-filter:blur(10px)}
-.contact-card:hover{border-color:rgba(47,125,255,.3);background:rgba(47,125,255,.03)}
-.contact-card .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.contact-card .lbl{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.25em;color:var(--blue);text-transform:uppercase}
-.contact-card .num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--ink3)}
-.contact-card .val{font-size:1.25rem;font-weight:600}
-.contact-card .val.big{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:.02em;font-weight:400}
-.contact-card .sub{color:var(--ink3);font-size:.88rem;margin-top:4px}
-.hours-grid{display:grid;gap:6px;margin-top:10px}
-.hours-grid .r{display:flex;justify-content:space-between;padding:4px 0;font-size:.92rem}
-.hours-grid .r.closed{color:var(--ink3)}
-.hours-grid .r .d{font-weight:500}
-.hours-grid .r .t{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--ink2)}
-.map-wrap{border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.08);min-height:540px;position:relative;background:var(--bg)}
-.map-wrap iframe{width:100%;height:100%;min-height:540px;border:0;filter:invert(.92) hue-rotate(180deg) saturate(.7) brightness(.95)}
-.map-overlay{position:absolute;top:24px;left:24px;padding:14px 18px;background:rgba(7,8,10,.85);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:10px;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.15em;color:var(--ink)}
-.map-overlay .live-dot{display:inline-block;width:8px;height:8px;background:#2bff5a;border-radius:50%;margin-right:10px;vertical-align:middle;box-shadow:0 0 10px #2bff5a;animation:pulse 1.4s ease infinite}
-@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
-footer{background:var(--bg);padding:100px 0 30px;border-top:1px solid rgba(255,255,255,.05);position:relative;overflow:hidden}
-.footer-display{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,18vw,18rem);line-height:.85;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1.5px var(--ink4);text-align:center;margin-bottom:60px;user-select:none}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-top:60px;border-top:1px solid rgba(255,255,255,.06)}
-.footer-col h5{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.25em;color:var(--ink3);text-transform:uppercase;margin-bottom:20px}
-.footer-col ul{list-style:none;display:grid;gap:10px}
-.footer-col a{color:var(--ink2);font-size:.92rem;transition:color .2s}
-.footer-col a:hover{color:var(--blue)}
-.footer-brand p{color:var(--ink3);max-width:360px;margin-top:20px;font-size:.92rem;line-height:1.65}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,.06);color:var(--ink3);font-size:.82rem}
-.footer-bottom .badges{display:flex;gap:16px;flex-wrap:wrap}
-.footer-bottom .badges span{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid rgba(255,255,255,.1);border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase}
-@media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
-
-@media(max-width:800px){
-.footer-col a{padding:10px 0;display:inline-block;min-height:44px;line-height:1.4}
-.contact-card a.val{padding:10px 0;display:inline-block;min-height:44px;line-height:1.4}
-.footer-col ul{gap:4px}
-nav ul a{padding:8px 0;min-height:44px}
-}
-.float-call{display:none;position:fixed;bottom:18px;left:18px;right:18px;z-index:100;background:var(--blue);color:var(--bg);padding:16px;border-radius:999px;text-align:center;font-weight:700;font-size:.95rem;box-shadow:0 10px 40px rgba(47,125,255,.4)}
-@media(max-width:800px){.float-call{display:block}footer{padding-bottom:100px}}
-</style>
-
-<section class="about" id="about">
+<section class="about">
 <div class="container">
-<div class="about-row"><span class="eyebrow">Chapter 01 — The Story</span><span class="num">RPM / EST. 2013</span></div>
+<div class="about-row"><span class="eyebrow">The Story</span><span class="num">RPM / EST. 2013</span></div>
 <h2 class="display about-headline reveal">Honest hands.<br/><span class="em">Serious</span> power.</h2>
 <div class="about-body">
 <div class="about-left reveal">
@@ -551,33 +97,113 @@ nav ul a{padding:8px 0;min-height:44px}
 </div>
 <div class="about-right reveal reveal-delay-1">
 <p class="drop">When Matthew picked up his first WRX and asked around for the right shop, every Subaru owner in Southern California pointed him to one address in Huntington Beach. That's how <strong>Powered By RPM</strong> works.</p>
-<p><strong>RPM has been building performance cars in Huntington Beach for over a decade.</strong> The team texts photo updates as the job progresses. They tell customers exactly what's wrong and exactly what it costs. And they treat every car like it's the only one in the shop — whether it's a daily-driver Crosstrek or a 500-horsepower track build.</p>
-<p><span class="pull">No upsells. No shortcuts. Just the kind of work that earns a reputation customers will drive 30+ miles to keep.</span></p>
-<p>Today, RPM is the local Authorized Install Facility for Crawford Performance, a trusted partner of ACT, ETS, APR, and Koyorad, and the shop your friend with the loud Subaru already told you about.</p>
-</div></div></div></section>
+<p><strong>RPM has been building performance cars in Huntington Beach for over a decade.</strong> Honest assessments, clean installs, and the tuning to back up the build sheet.</p>
+<p><span class="pull">No upsells. No shortcuts. The kind of work customers drive 30+ miles to keep.</span></p>
+</div></div>
+<div class="section-cta"><a href="#work" data-tab="work">See What We Build →</a></div>
+</div></section>
+<section class="pullquote">
+<div class="container">
+<div class="pq-content reveal">
+<svg class="pq-mark" viewBox="0 0 100 80" aria-hidden="true"><path d="M0 80 V40 C0 18 18 0 40 0 H45 V20 H40 C29 20 20 29 20 40 V80 Z M55 80 V40 C55 18 73 0 95 0 H100 V20 H95 C84 20 75 29 75 40 V80 Z" fill="currentColor"/></svg>
+<p class="pq-text display">Everyone I talked to said <span class="em">I need to go to RPM</span> — so I drove 30 miles past every other shop. So happy I did.</p>
+<div class="pq-author"><div class="pq-avatar">M</div><div><div class="pq-name">Matthew Diaz</div><div class="pq-meta">WRX Owner · Google · 5★</div></div></div>
+</div></div></section>
+</div>
 
-<section class="services" id="services">
+<!-- WORK TAB -->
+<div id="tab-work" class="tab-panel">
+<section class="hero compact">
+<div class="hero-bg"></div>
+<canvas class="aurora" id="aurora-work"></canvas>
+<div class="container hero-content">
+<h1 class="display"><span class="eyebrow" style="margin-bottom:20px;">The Work</span><br/>Built. Tuned.<br/>Track-Proven.</h1>
+<div class="hero-sub"><p>From a daily-driver bolt-on to a 500-horsepower track build — every job leaves the shop with the numbers, the install quality, and the documentation to back it up.</p>
+<div class="hero-cta-stack"><a href="tel:+17143970820" class="btn magnetic"><span>Start Your Build</span><span class="arrow">↗</span></a></div></div>
+</div></section>
+<section class="services">
 <div class="container">
 <div class="services-head reveal">
-<div><span class="eyebrow">Chapter 02 — The Work</span><h2 class="display" style="margin-top:20px;">Built. Tuned.<br/>Track-Proven.</h2></div>
-<p>From a daily-driver bolt-on package to a track-ready 500-horsepower build — every job leaves the shop with the numbers, the install quality, and the documentation to back it up.</p>
+<div><span class="eyebrow">Services</span><h2 class="display" style="margin-top:20px;">What We Do.</h2></div>
+<p>Six core services. All install in-house. Every build comes off the dyno with the numbers documented.</p>
 </div>
 <div class="services-list">
-<a href="tel:+17143970820" class="service-row reveal"><span class="num">01 /</span><span class="name">Performance Builds</span><span class="arr">↗</span><p class="desc">Stage upgrades, full builds, and custom one-offs. We scope it, source the parts, install everything in-house, and tune until the dyno sheet matches the plan.</p></a>
-<a href="tel:+17143970820" class="service-row reveal"><span class="num">02 /</span><span class="name">Turbo &amp; Forced Induction</span><span class="arr">↗</span><p class="desc">Turbo kits, upgraded compressors, supporting mods, fueling, and full system integration. Done right the first time, with data to prove it.</p></a>
-<a href="tel:+17143970820" class="service-row reveal"><span class="num">03 /</span><span class="name">Engine Work &amp; Diagnostics</span><span class="arr">↗</span><p class="desc">Motor rebuilds, refreshes, leak diagnostics, and the kind of honest assessments that have saved customers thousands versus the dealer quote.</p></a>
-<a href="tel:+17143970820" class="service-row reveal"><span class="num">04 /</span><span class="name">Authorized Install</span><span class="arr">↗</span><p class="desc">Official Crawford Performance Authorized Install Facility, plus install partner for ACT, ETS, APR, Koyorad, and the brands the Subaru community trusts.</p></a>
-<a href="tel:+17143970820" class="service-row reveal"><span class="num">05 /</span><span class="name">Suspension, Brakes &amp; Wheels</span><span class="arr">↗</span><p class="desc">Coilovers, lift kits, big brake kits, wheel and tire packages, and proper alignments. Chasing lap times or trail-ready stance — we dial it in.</p></a>
-<a href="tel:+17143970820" class="service-row reveal"><span class="num">06 /</span><span class="name">Dyno &amp; Track Prep</span><span class="arr">↗</span><p class="desc">Track-tested, dyno-verified. Every serious build leaves with the numbers to back it up and the prep to perform when it counts.</p></a>
+<a href="tel:+17143970820" class="service-row reveal"><span class="num">01 /</span><span class="name">Performance Builds</span><span class="arr">↗</span><p class="desc">Stage upgrades, full builds, and custom one-offs. We scope it, source the parts, install in-house, and tune until the dyno sheet matches the plan.</p></a>
+<a href="tel:+17143970820" class="service-row reveal"><span class="num">02 /</span><span class="name">Turbo &amp; Forced Induction</span><span class="arr">↗</span><p class="desc">Turbo kits, upgraded compressors, supporting mods, fueling, and full system integration. Done right the first time.</p></a>
+<a href="tel:+17143970820" class="service-row reveal"><span class="num">03 /</span><span class="name">Engine Work &amp; Diagnostics</span><span class="arr">↗</span><p class="desc">Motor rebuilds, refreshes, leak diagnostics, and the kind of honest assessments that have saved customers thousands versus the dealer.</p></a>
+<a href="tel:+17143970820" class="service-row reveal"><span class="num">04 /</span><span class="name">Authorized Install</span><span class="arr">↗</span><p class="desc">Official Crawford Performance Authorized Install Facility, plus install partner for ACT, ETS, APR, Koyorad.</p></a>
+<a href="tel:+17143970820" class="service-row reveal"><span class="num">05 /</span><span class="name">Suspension, Brakes &amp; Wheels</span><span class="arr">↗</span><p class="desc">Coilovers, lift kits, big brake kits, wheel and tire packages, proper alignments.</p></a>
+<a href="tel:+17143970820" class="service-row reveal"><span class="num">06 /</span><span class="name">Dyno &amp; Track Prep</span><span class="arr">↗</span><p class="desc">Track-tested, dyno-verified. Every serious build leaves with the numbers and the prep to perform when it counts.</p></a>
 </div></div></section>
+<section class="specialty">
+<div class="container">
+<div class="specialty-grid">
+<div class="gauge-wrap reveal" id="gauge">
+<svg viewBox="0 0 400 400">
+<circle class="gauge-bg" cx="200" cy="200" r="180" stroke-width="1"/>
+<circle class="gauge-bg" cx="200" cy="200" r="160" stroke-width="1"/>
+<g id="ticks"></g>
+<path class="gauge-arc" id="gaugeArc" d="M 73 295 A 150 150 0 1 1 327 295" pathLength="1000"/>
+<line class="gauge-needle" id="gaugeNeedle" x1="200" y1="200" x2="200" y2="80"/>
+<circle class="gauge-center" cx="200" cy="200" r="10"/>
+<circle cx="200" cy="200" r="4" fill="var(--bg)"/>
+</svg>
+<div class="gauge-readout"><div class="big"><span id="gaugeReadout">500</span>+</div><div class="unit">HORSEPOWER</div><div class="label">FROM A BRZ</div></div>
+</div>
+<div class="specialty-text reveal reveal-delay-1">
+<div class="tag">The Specialty</div>
+<h3>From a BRZ.<br/><span class="em">Yeah,</span> we do that.</h3>
+<p>The BRZ and GR86 are the most underrated platforms on the road — and the most rewarding when built right. We've been pushing these chassis past every expectation since they hit the streets.</p>
+<p>Turbo kits. Full engine builds. Supporting mods. Proper fueling. And the tuning to make every horsepower live.</p>
+<div class="build-spec">
+<div><div class="k">Platform</div><div class="v">BRZ / 86 / FR-S</div></div>
+<div><div class="k">Approach</div><div class="v">Forced Induction</div></div>
+<div><div class="k">Verified</div><div class="v">Dyno + Track</div></div>
+<div><div class="k">Built Right Here</div><div class="v">Huntington Beach</div></div>
+</div>
+<a href="tel:+17143970820" class="btn magnetic" style="max-width:340px;"><span>Start Your Build</span><span class="arrow">↗</span></a>
+</div></div></div></section>
+<section class="builds-section">
+<div class="container">
+<div class="builds-head"><span class="lbl">The Builds</span><span class="counter">04 Featured</span></div>
+<div class="builds-track">
+<div class="build-slide s1 reveal"><span class="b-tag">SUBARU · STAGE 3</span><span class="b-num">01 / WRX BUILD</span><h3 class="b-name">Daily-Driven <span class="em">Demon.</span></h3><p class="b-desc">Stage 3 bolt-on package with built short block, ETS top mount turbo kit, fueling, and full custom dyno tune. Daily reliable. Track capable.</p><div class="b-specs"><div><span class="k">Platform</span><span class="v">2018 WRX</span></div><div><span class="k">Power</span><span class="v">412 WHP</span></div><div><span class="k">Torque</span><span class="v">395 LB-FT</span></div></div></div>
+<div class="build-slide s2 reveal"><span class="b-tag">SUBARU · TRACK BUILD</span><span class="b-num">02 / STI BUILD</span><h3 class="b-name">Track-Bred <span class="em">STI.</span></h3><p class="b-desc">Forged-bottom STI with upgraded turbo, full coilover swap, big brake kit, and suspension geometry to put it all down at the apex.</p><div class="b-specs"><div><span class="k">Platform</span><span class="v">2015 STI</span></div><div><span class="k">Power</span><span class="v">487 WHP</span></div><div><span class="k">Setup</span><span class="v">Coilover + BBK</span></div></div></div>
+<div class="build-slide s3 reveal"><span class="b-tag">BRZ / 86 · HALO BUILD</span><span class="b-num">03 / BRZ BUILD</span><h3 class="b-name">500-HP <span class="em">BRZ.</span></h3><p class="b-desc">The build that put RPM on the map for the BRZ community. Forced induction conversion, full engine build, ECU work, and tuning.</p><div class="b-specs"><div><span class="k">Platform</span><span class="v">BRZ / 86</span></div><div><span class="k">Power</span><span class="v">500+ WHP</span></div><div><span class="k">Approach</span><span class="v">Forced Induction</span></div></div></div>
+<div class="build-slide s4 reveal"><span class="b-tag">CROSSTREK · OVERLAND</span><span class="b-num">04 / CROSSTREK</span><h3 class="b-name">Lifted &amp; <span class="em">Loaded.</span></h3><p class="b-desc">Overland-spec Crosstrek with full lift kit, off-road bumper, light bar, and an all-terrain package.</p><div class="b-specs"><div><span class="k">Platform</span><span class="v">Crosstrek</span></div><div><span class="k">Setup</span><span class="v">2.5" Lift</span></div><div><span class="k">Use</span><span class="v">Overland</span></div></div></div>
+</div></div></section>
+<section class="brands">
+<div class="container">
+<div class="brands-head reveal"><h3>Trusted by the brands<br/>your build depends on.</h3><span class="eyebrow">Authorized · Verified · Installed Here</span></div>
+<div class="brands-grid reveal reveal-delay-1">
+<div class="brand"><span class="badge">AUTHORIZED</span><div class="name">CRAWFORD</div><div class="sub">Performance</div></div>
+<div class="brand"><div class="name">ACT</div><div class="sub">Twin Disc Clutch</div></div>
+<div class="brand"><div class="name">ETS</div><div class="sub">Extreme Turbo</div></div>
+<div class="brand"><div class="name">APR</div><div class="sub">Carbon Aero</div></div>
+<div class="brand"><div class="name">KOYORAD</div><div class="sub">Cooling</div></div>
+</div></div></section>
+<section class="financing">
+<div class="container">
+<div class="fin-card reveal">
+<div class="fin-text"><span class="eyebrow" style="color:var(--blue2);">Snap Finance Available</span><h3>Build Now.<br/>Pay Over Time.</h3><p>Get approved online in minutes for up to $5,000 toward your build. No perfect credit required.</p></div>
+<div class="fin-cta"><div class="big">$5<span class="sm">K</span></div><div class="terms">Approval Limit</div><a href="tel:+17143970820" class="btn magnetic"><span>Get Approved</span><span class="arrow">↗</span></a></div>
+</div></div></section>
+</div>
 
-<section class="shop" id="shop">
+<!-- SHOP TAB -->
+<div id="tab-shop" class="tab-panel">
+<section class="hero compact">
+<div class="hero-bg"></div>
+<canvas class="aurora" id="aurora-shop"></canvas>
+<div class="container hero-content">
+<h1 class="display"><span class="eyebrow" style="margin-bottom:20px;">The Catalog</span><br/>Shop the Parts.</h1>
+<div class="hero-sub"><p>Curated stock for Subaru, BRZ, and GR86 builds. Ships nationwide. Local pickup at the shop.</p>
+<div class="hero-cta-stack"><a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="btn magnetic"><span>Full Catalog On IG</span><span class="arrow">↗</span></a></div></div>
+</div></section>
+<section class="shop">
 <div class="container">
 <div class="shop-head reveal">
-<div>
-<span class="eyebrow">Chapter 03 — The Shop</span>
-<h2 class="display" style="margin-top:20px;">Shop the <span class="em">Parts.</span></h2>
-</div>
+<div><span class="eyebrow">Browse</span><h2 class="display" style="margin-top:20px;">12 Parts <span class="em">in stock.</span></h2></div>
 <div class="meta">
 Curated stock · Ships nationwide<br/>Local pickup at the shop<br/>
 <span class="secure"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm0 11h7c-.5 4.5-3.4 8.5-7 9.9V12H5V6.3l7-3.1V12z"/></svg> Secured by Stripe</span>
@@ -595,299 +221,95 @@ Curated stock · Ships nationwide<br/>Local pickup at the shop<br/>
 <button class="shop-filter" data-filter="wire">Electrical</button>
 </div>
 <div class="shop-grid" id="shopGrid">
-
-<div class="product-card reveal" data-cat="turbo">
-<div class="product-img c1">
-<span class="product-badge new">In Stock</span>
-<span class="product-tag">Turbo</span>
-<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20"/><circle cx="32" cy="32" r="8"/><circle cx="32" cy="32" r="2.5" fill="currentColor"/><path d="M32 12v8M32 44v8M12 32h8M44 32h8M18 18l5 5M46 18l-5 5M18 46l5-5M46 46l-5-5"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">ETS</span>
-<h3>ETS Top Mount Turbo Kit</h3>
-<p class="desc">Direct bolt-on. Includes manifold, downpipe, and supporting hardware.</p>
-<div class="product-meta">
-<div class="product-price">$2,899<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-<div class="product-card reveal" data-cat="turbo">
-<div class="product-img c2">
-<span class="product-badge">Heat Shield</span>
-<span class="product-tag">Turbo</span>
-<svg viewBox="0 0 64 64"><path d="M20 16h24l-2 32H22z"/><path d="M26 24h12M26 32h12M26 40h12"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">PTP</span>
-<h3>PTP Turbo Blanket</h3>
-<p class="desc">Lava-fiber thermal blanket. Drops intake temps and shields wiring.</p>
-<div class="product-meta">
-<div class="product-price">$185<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-<div class="product-card reveal" data-cat="drive">
-<div class="product-img c3">
-<span class="product-badge new">In Stock</span>
-<span class="product-tag">Drivetrain</span>
-<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="12"/><circle cx="32" cy="32" r="3" fill="currentColor"/><path d="M32 8v6M32 50v6M8 32h6M50 32h6"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">ACT</span>
-<h3>ACT HD Performance Clutch Kit</h3>
-<p class="desc">Heavy-duty pressure plate + street/strip disc. Holds 500+ TQ.</p>
-<div class="product-meta">
-<div class="product-price">$625<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-<div class="product-card reveal" data-cat="fuel">
-<div class="product-img c3">
-<span class="product-badge">High Flow</span>
-<span class="product-tag">Fueling</span>
-<svg viewBox="0 0 64 64"><rect x="22" y="12" width="20" height="40" rx="3"/><path d="M28 22h8M28 30h8M28 38h8M32 12v-4M28 52v4M36 52v4"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">AEM</span>
-<h3>AEM 320LPH In-Tank Fuel Pump</h3>
-<p class="desc">High-pressure pump for E85 and forced induction setups.</p>
-<div class="product-meta">
-<div class="product-price">$189<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-<div class="product-card reveal" data-cat="fuel">
-<div class="product-img c1">
-<span class="product-tag">Fueling</span>
-<svg viewBox="0 0 64 64"><circle cx="22" cy="32" r="6"/><circle cx="42" cy="32" r="6"/><path d="M28 32h8M22 26v-8M22 46v-8M42 26v-8M42 46v-8"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">Injector Dynamics</span>
-<h3>ID1050x Fuel Injectors (Set of 4)</h3>
-<p class="desc">1050cc/min injectors for E85 and high-boost builds.</p>
-<div class="product-meta">
-<div class="product-price">$849<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-<div class="product-card reveal" data-cat="chassis">
-<div class="product-img c4">
-<span class="product-badge new">In Stock</span>
-<span class="product-tag">Chassis</span>
-<svg viewBox="0 0 64 64"><rect x="18" y="22" width="28" height="20" rx="3"/><circle cx="26" cy="32" r="3"/><circle cx="38" cy="32" r="3"/><path d="M18 32H10M54 32h-8M32 22V14M32 50v-8"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">Group N</span>
-<h3>Group N Engine &amp; Trans Mount Kit</h3>
-<p class="desc">Solid urethane mounts. Locks the drivetrain. Daily-livable.</p>
-<div class="product-meta">
-<div class="product-price">$185<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-<div class="product-card reveal" data-cat="chassis">
-<div class="product-img c1">
-<span class="product-badge">Coilovers</span>
-<span class="product-tag">Suspension</span>
-<svg viewBox="0 0 64 64"><circle cx="32" cy="14" r="4"/><circle cx="32" cy="50" r="4"/><path d="M32 18v3M28 22h8M28 26h8M28 30h8M28 34h8M28 38h8M28 42h8M32 46v-3"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">BC Racing</span>
-<h3>BC Racing BR Series Coilovers</h3>
-<p class="desc">30-step adjustable. Street, track, or stance — your call.</p>
-<div class="product-meta">
-<div class="product-price">$1,195<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-
-<div class="product-card reveal" data-cat="engine">
-<div class="product-img c2">
-<span class="product-badge new">In Stock</span>
-<span class="product-tag">Engine</span>
-<svg viewBox="0 0 64 64"><rect x="14" y="20" width="36" height="24" rx="2"/><circle cx="22" cy="32" r="3"/><circle cx="42" cy="32" r="3"/><path d="M22 20v-4M42 20v-4M22 44v4M42 44v4M14 28h4M50 28h-4M14 36h4M50 36h-4"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">Manley</span>
-<h3>Manley H-Beam Connecting Rods</h3>
-<p class="desc">Forged 4340 steel, ARP 2000 bolts. The foundation of any built engine.</p>
-<div class="product-meta">
-<div class="product-price">$899<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-<div class="product-card reveal" data-cat="engine">
-<div class="product-img c4">
-<span class="product-tag">Engine</span>
-<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="14"/><path d="M32 18v-6M32 52v-6M14 32h4M50 32h-4M20 20l3 3M44 44l-3-3M20 44l3-3M44 20l-3 3"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">ARP</span>
-<h3>ARP Main &amp; Head Stud Kit</h3>
-<p class="desc">Aerospace-grade studs. Required for any boosted Subaru rebuild.</p>
-<div class="product-meta">
-<div class="product-price">$489<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-<div class="product-card reveal" data-cat="wire">
-<div class="product-img c3">
-<span class="product-badge new">In Stock</span>
-<span class="product-tag">Electrical</span>
-<svg viewBox="0 0 64 64"><path d="M8 20c4-6 12-6 16 0s12 6 16 0 12-6 16 0M8 32c4-6 12-6 16 0s12 6 16 0 12-6 16 0M8 44c4-6 12-6 16 0s12 6 16 0 12-6 16 0"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">Rywire</span>
-<h3>Rywire Engine Wire Harness</h3>
-<p class="desc">Plug-and-play standalone harness. Cleaned-up wiring for engine swaps.</p>
-<div class="product-meta">
-<div class="product-price">$649<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-<div class="product-card reveal" data-cat="wire">
-<div class="product-img c1">
-<span class="product-tag">Electrical</span>
-<svg viewBox="0 0 64 64"><rect x="22" y="14" width="20" height="36" rx="2"/><circle cx="32" cy="22" r="2"/><circle cx="32" cy="32" r="2"/><circle cx="32" cy="42" r="2"/><path d="M32 14v-4M32 54v-4M42 32h6M16 32h6"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">AEM</span>
-<h3>AEM Infinity Standalone ECU</h3>
-<p class="desc">Full-control engine management. Plug into our tuning expertise.</p>
-<div class="product-meta">
-<div class="product-price">$1,395<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
-<div class="product-card reveal" data-cat="cool">
-<div class="product-img c3">
-<span class="product-badge new">In Stock</span>
-<span class="product-tag">Cooling</span>
-<svg viewBox="0 0 64 64"><rect x="14" y="18" width="36" height="28" rx="2"/><path d="M14 24h36M14 32h36M14 40h36M22 18v28M30 18v28M38 18v28M46 18v28"/></svg>
-</div>
-<div class="product-info">
-<span class="brand">Koyorad</span>
-<h3>Koyo Aluminum Performance Radiator</h3>
-<p class="desc">All-aluminum, hand TIG-welded. Drops coolant temps 15°F+.</p>
-<div class="product-meta">
-<div class="product-price">$349<span class="cents">.00</span></div>
-<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-buy magnetic">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div></div></div>
-
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="turbo"><div class="product-img c1"><span class="product-badge new">In Stock</span><span class="product-tag">Turbo</span><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20"/><circle cx="32" cy="32" r="8"/><circle cx="32" cy="32" r="2.5" fill="currentColor"/><path d="M32 12v8M32 44v8M12 32h8M44 32h8M18 18l5 5M46 18l-5 5M18 46l5-5M46 46l-5-5"/></svg></div><div class="product-info"><span class="brand">ETS</span><h3>ETS Top Mount Turbo Kit</h3><p class="desc">Direct bolt-on. Manifold, downpipe, supporting hardware.</p><div class="product-meta"><div class="product-price">$2,899<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="turbo"><div class="product-img c2"><span class="product-badge">Heat Shield</span><span class="product-tag">Turbo</span><svg viewBox="0 0 64 64"><path d="M20 16h24l-2 32H22z"/><path d="M26 24h12M26 32h12M26 40h12"/></svg></div><div class="product-info"><span class="brand">PTP</span><h3>PTP Turbo Blanket</h3><p class="desc">Lava-fiber thermal blanket. Drops intake temps.</p><div class="product-meta"><div class="product-price">$185<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="drive"><div class="product-img c3"><span class="product-badge new">In Stock</span><span class="product-tag">Drivetrain</span><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="12"/><circle cx="32" cy="32" r="3" fill="currentColor"/><path d="M32 8v6M32 50v6M8 32h6M50 32h6"/></svg></div><div class="product-info"><span class="brand">ACT</span><h3>ACT HD Performance Clutch Kit</h3><p class="desc">Heavy-duty pressure plate + street/strip disc. Holds 500+ TQ.</p><div class="product-meta"><div class="product-price">$625<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="fuel"><div class="product-img c3"><span class="product-badge">High Flow</span><span class="product-tag">Fueling</span><svg viewBox="0 0 64 64"><rect x="22" y="12" width="20" height="40" rx="3"/><path d="M28 22h8M28 30h8M28 38h8M32 12v-4M28 52v4M36 52v4"/></svg></div><div class="product-info"><span class="brand">AEM</span><h3>AEM 320LPH In-Tank Fuel Pump</h3><p class="desc">High-pressure pump for E85 and forced induction.</p><div class="product-meta"><div class="product-price">$189<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="fuel"><div class="product-img c1"><span class="product-tag">Fueling</span><svg viewBox="0 0 64 64"><circle cx="22" cy="32" r="6"/><circle cx="42" cy="32" r="6"/><path d="M28 32h8M22 26v-8M22 46v-8M42 26v-8M42 46v-8"/></svg></div><div class="product-info"><span class="brand">Injector Dynamics</span><h3>ID1050x Fuel Injectors (Set of 4)</h3><p class="desc">1050cc/min injectors for E85 and high-boost builds.</p><div class="product-meta"><div class="product-price">$849<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="chassis"><div class="product-img c4"><span class="product-badge new">In Stock</span><span class="product-tag">Chassis</span><svg viewBox="0 0 64 64"><rect x="18" y="22" width="28" height="20" rx="3"/><circle cx="26" cy="32" r="3"/><circle cx="38" cy="32" r="3"/><path d="M18 32H10M54 32h-8M32 22V14M32 50v-8"/></svg></div><div class="product-info"><span class="brand">Group N</span><h3>Group N Engine &amp; Trans Mount Kit</h3><p class="desc">Solid urethane mounts. Daily-livable.</p><div class="product-meta"><div class="product-price">$185<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="chassis"><div class="product-img c1"><span class="product-badge">Coilovers</span><span class="product-tag">Suspension</span><svg viewBox="0 0 64 64"><circle cx="32" cy="14" r="4"/><circle cx="32" cy="50" r="4"/><path d="M32 18v3M28 22h8M28 26h8M28 30h8M28 34h8M28 38h8M28 42h8M32 46v-3"/></svg></div><div class="product-info"><span class="brand">BC Racing</span><h3>BC Racing BR Series Coilovers</h3><p class="desc">30-step adjustable. Street, track, or stance.</p><div class="product-meta"><div class="product-price">$1,195<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="engine"><div class="product-img c2"><span class="product-badge new">In Stock</span><span class="product-tag">Engine</span><svg viewBox="0 0 64 64"><rect x="14" y="20" width="36" height="24" rx="2"/><circle cx="22" cy="32" r="3"/><circle cx="42" cy="32" r="3"/><path d="M22 20v-4M42 20v-4M22 44v4M42 44v4M14 28h4M50 28h-4M14 36h4M50 36h-4"/></svg></div><div class="product-info"><span class="brand">Manley</span><h3>Manley H-Beam Connecting Rods</h3><p class="desc">Forged 4340 steel, ARP 2000 bolts.</p><div class="product-meta"><div class="product-price">$899<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="engine"><div class="product-img c4"><span class="product-tag">Engine</span><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="14"/><path d="M32 18v-6M32 52v-6M14 32h4M50 32h-4M20 20l3 3M44 44l-3-3M20 44l3-3M44 20l-3 3"/></svg></div><div class="product-info"><span class="brand">ARP</span><h3>ARP Main &amp; Head Stud Kit</h3><p class="desc">Aerospace-grade studs. Required for boosted rebuilds.</p><div class="product-meta"><div class="product-price">$489<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="wire"><div class="product-img c3"><span class="product-badge new">In Stock</span><span class="product-tag">Electrical</span><svg viewBox="0 0 64 64"><path d="M8 20c4-6 12-6 16 0s12 6 16 0 12-6 16 0M8 32c4-6 12-6 16 0s12 6 16 0 12-6 16 0M8 44c4-6 12-6 16 0s12 6 16 0 12-6 16 0"/></svg></div><div class="product-info"><span class="brand">Rywire</span><h3>Rywire Engine Wire Harness</h3><p class="desc">Plug-and-play standalone harness for engine swaps.</p><div class="product-meta"><div class="product-price">$649<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="wire"><div class="product-img c1"><span class="product-tag">Electrical</span><svg viewBox="0 0 64 64"><rect x="22" y="14" width="20" height="36" rx="2"/><circle cx="32" cy="22" r="2"/><circle cx="32" cy="32" r="2"/><circle cx="32" cy="42" r="2"/><path d="M32 14v-4M32 54v-4M42 32h6M16 32h6"/></svg></div><div class="product-info"><span class="brand">AEM</span><h3>AEM Infinity Standalone ECU</h3><p class="desc">Full-control engine management.</p><div class="product-meta"><div class="product-price">$1,395<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="product-card reveal" data-cat="cool"><div class="product-img c3"><span class="product-badge new">In Stock</span><span class="product-tag">Cooling</span><svg viewBox="0 0 64 64"><rect x="14" y="18" width="36" height="28" rx="2"/><path d="M14 24h36M14 32h36M14 40h36M22 18v28M30 18v28M38 18v28M46 18v28"/></svg></div><div class="product-info"><span class="brand">Koyorad</span><h3>Koyo Aluminum Performance Radiator</h3><p class="desc">All-aluminum, hand TIG-welded. Drops coolant temps 15°F+.</p><div class="product-meta"><div class="product-price">$349<span class="cents">.00</span></div><span class="product-buy">Buy <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></a>
 </div>
 <div class="shop-foot">
-<span class="stripe-badge"><svg viewBox="0 0 60 25"><path d="M59.5 14.5c0-4.4-2.1-7.8-6.2-7.8s-6.6 3.4-6.6 7.7c0 5.1 2.9 7.7 7.1 7.7 2.1 0 3.6-.5 4.8-1.1v-3.4c-1.2.6-2.5.9-4.2.9-1.7 0-3.2-.6-3.4-2.6h8.5c0-.2.1-1 .1-1.4zm-8.6-1.8c0-1.9 1.2-2.7 2.3-2.7 1.1 0 2.2.8 2.2 2.7h-4.5zM44.4 6.7c-1.7 0-2.8.8-3.5 1.4l-.2-1.1H37v18.5l4.1-.9V20c.6.4 1.4 1 2.7 1 2.8 0 5.3-2.3 5.3-7.4 0-4.6-2.5-6.9-5.3-6.9zm-1 11.4c-.9 0-1.4-.3-1.8-.7v-5.5c.4-.4.9-.8 1.8-.8 1.4 0 2.4 1.6 2.4 3.5s-.9 3.5-2.4 3.5zM30.4 5.7L34.5 5v-3.3l-4.1.9zM30.4 6.9h4.1v14.1h-4.1zM26 8.1l-.3-1.2H22v14.1h4.1V11.5c1-1.3 2.6-1 3.1-.9V6.9c-.5-.2-2.4-.5-3.2 1.2zM17.6 3.4l-4 .9-.1 13.2c0 2.4 1.8 4.2 4.2 4.2 1.4 0 2.4-.2 2.9-.5v-3.4c-.6.1-3 .8-3-1.4v-5.8h3V6.9h-3V3.4zM4.2 11c0-.6.5-.9 1.3-.9 1.2 0 2.8.4 4.1 1.1v-3.9C8.2 6.7 6.8 6.5 5.5 6.5c-3.2 0-5.4 1.7-5.4 4.4 0 4.3 5.9 3.6 5.9 5.5 0 .7-.6 1-1.4 1-1.3 0-3-.5-4.5-1.3v3.9c1.6.7 3.3.9 4.5.9 3.3 0 5.6-1.6 5.6-4.3 0-4.6-6-3.8-6-5.6z" fill="currentColor"/></svg> Secure checkout</span>
 <span class="note">Need install? · <a href="tel:+17143970820">Call (714) 397-0820</a> · Book a bay with your parts</span>
+<a href="#visit" data-tab="visit" class="note" style="color:var(--blue)">Visit the shop →</a>
 </div>
 </div></section>
+</div>
 
-
-<section class="pullquote">
+<!-- VISIT TAB -->
+<div id="tab-visit" class="tab-panel">
+<section class="hero compact">
+<div class="hero-bg"></div>
+<canvas class="aurora" id="aurora-visit"></canvas>
+<div class="container hero-content">
+<h1 class="display"><span class="eyebrow" style="margin-bottom:20px;">The Visit</span><br/>Stop by the<br/>shop in <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--blue)">Huntington Beach.</span></h1>
+<div class="hero-sub"><p>18091 Redondo Cir, Unit i. Two minutes off the 405. Wheelchair accessible. On-site parking.</p>
+<div class="hero-cta-stack"><a href="tel:+17143970820" class="btn magnetic"><span>Call Or Text RPM</span><span class="arrow">↗</span></a></div></div>
+</div></section>
+<section class="contact">
 <div class="container">
-<div class="pq-content reveal">
-<svg class="pq-mark" viewBox="0 0 100 80" aria-hidden="true"><path d="M0 80 V40 C0 18 18 0 40 0 H45 V20 H40 C29 20 20 29 20 40 V80 Z M55 80 V40 C55 18 73 0 95 0 H100 V20 H95 C84 20 75 29 75 40 V80 Z" fill="currentColor"/></svg>
-<p class="pq-text display">Everyone I talked to said <span class="em">I need to go to RPM</span> — so I drove 30 miles past every other shop to get here. And I am so happy I did.</p>
-<div class="pq-author"><div class="pq-avatar">M</div><div><div class="pq-name">Matthew Diaz</div><div class="pq-meta">WRX Owner · Google Review · 5★</div></div></div>
+<div class="contact-grid">
+<div class="contact-cards reveal">
+<div class="contact-card">
+<div class="head"><span class="lbl">Call or Text RPM</span><span class="num">01 / 04</span></div>
+<a href="tel:+17143970820" class="val big">(714) 397-0820</a>
+<div class="sub">Mon–Fri 10–6 · Sat 1–5</div>
+</div>
+<div class="contact-card">
+<div class="head"><span class="lbl">The Shop</span><span class="num">02 / 04</span></div>
+<a href="https://maps.google.com/?q=18091+Redondo+Cir,+Huntington+Beach,+CA+92648" target="_blank" rel="noopener" class="val">18091 Redondo Cir, Unit i<br/>Huntington Beach, CA 92648</a>
+<div class="sub">Wheelchair accessible · On-site parking</div>
+</div>
+<div class="contact-card">
+<div class="head"><span class="lbl">Hours</span><span class="num">03 / 04</span></div>
+<div class="hours-grid">
+<div class="r"><span class="d">Monday</span><span class="t">10:00 – 18:00</span></div>
+<div class="r"><span class="d">Tuesday</span><span class="t">10:00 – 18:00</span></div>
+<div class="r"><span class="d">Wednesday</span><span class="t">10:00 – 18:00</span></div>
+<div class="r"><span class="d">Thursday</span><span class="t">10:00 – 18:00</span></div>
+<div class="r"><span class="d">Friday</span><span class="t">10:00 – 18:00</span></div>
+<div class="r"><span class="d">Saturday</span><span class="t">13:00 – 17:00</span></div>
+<div class="r closed"><span class="d">Sunday</span><span class="t">Closed</span></div>
+</div></div>
+<div class="contact-card">
+<div class="head"><span class="lbl">Instagram &amp; Payments</span><span class="num">04 / 04</span></div>
+<a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="val" style="font-size:1.1rem">@poweredbyrpm</a>
+<div class="sub">Live shop feed · Credit · Debit · Snap Financing</div>
+</div></div>
+<div class="map-wrap reveal reveal-delay-1"><div class="map-overlay"><span class="live-dot"></span>RPM HQ · LIVE</div><iframe src="https://www.google.com/maps?q=18091+Redondo+Cir,+Huntington+Beach,+CA+92648&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Powered By RPM map"></iframe></div>
 </div></div></section>
-
-<section class="specialty" id="specialty">
-<div class="container">
-<div class="specialty-grid">
-<div class="gauge-wrap reveal" id="gauge">
-<svg viewBox="0 0 400 400">
-<circle class="gauge-bg" cx="200" cy="200" r="180" stroke-width="1"/>
-<circle class="gauge-bg" cx="200" cy="200" r="160" stroke-width="1"/>
-<g id="ticks"></g>
-<path class="gauge-arc" id="gaugeArc" d="M 73 295 A 150 150 0 1 1 327 295" pathLength="1000"/>
-<line class="gauge-needle" id="gaugeNeedle" x1="200" y1="200" x2="200" y2="80"/>
-<circle class="gauge-center" cx="200" cy="200" r="10"/>
-<circle cx="200" cy="200" r="4" fill="var(--bg)"/>
-</svg>
-<div class="gauge-readout"><div class="big"><span id="gaugeReadout">500</span>+</div><div class="unit">HORSEPOWER</div><div class="label">FROM A BRZ</div></div>
-</div>
-<div class="specialty-text reveal reveal-delay-1">
-<div class="tag">Chapter 04 — The Specialty</div>
-<h3>From a BRZ.<br/><span class="em">Yeah,</span> we do that.</h3>
-<p>The BRZ and GR86 are the most underrated platforms on the road — and the most rewarding when built right. We've been pushing these chassis past every expectation since they hit the streets.</p>
-<p>Turbo kits. Full engine builds. Supporting mods. Proper fueling. And the tuning to make every horsepower live. If you own a BRZ or 86 and want it to <em>actually</em> move, this is the shop.</p>
-<div class="build-spec">
-<div><div class="k">Platform</div><div class="v">BRZ / 86 / FR-S</div></div>
-<div><div class="k">Approach</div><div class="v">Forced Induction</div></div>
-<div><div class="k">Verified</div><div class="v">Dyno + Track</div></div>
-<div><div class="k">Built Right Here</div><div class="v">Huntington Beach</div></div>
-</div>
-<a href="tel:+17143970820" class="btn magnetic" style="max-width:340px;"><span>Start Your Build</span><span class="arrow">↗</span></a>
-</div></div></div></section>
-
-<section class="builds-section" id="builds">
-<div class="builds-sticky">
-<div class="builds-head"><span class="lbl">Chapter 05 — The Builds</span><span class="counter">04 Builds</span></div>
-<div class="builds-track" id="buildsTrack">
-<div class="build-slide s1"><span class="b-tag">SUBARU · STAGE 3</span><span class="b-num">01 / WRX BUILD</span><h3 class="b-name">Daily-Driven <span class="em">Demon.</span></h3><p class="b-desc">Stage 3 bolt-on package with built short block, ETS top mount turbo kit, fueling, and full custom dyno tune. Daily reliable. Track capable.</p><div class="b-specs"><div><span class="k">Platform</span><span class="v">2018 WRX</span></div><div><span class="k">Power</span><span class="v">412 WHP</span></div><div><span class="k">Torque</span><span class="v">395 LB-FT</span></div></div></div>
-<div class="build-slide s2"><span class="b-tag">SUBARU · TRACK BUILD</span><span class="b-num">02 / STI BUILD</span><h3 class="b-name">Track-Bred <span class="em">STI.</span></h3><p class="b-desc">Forged-bottom STI with upgraded turbo, full coilover swap, big brake kit, and the suspension geometry to put it all down at the apex.</p><div class="b-specs"><div><span class="k">Platform</span><span class="v">2015 STI</span></div><div><span class="k">Power</span><span class="v">487 WHP</span></div><div><span class="k">Setup</span><span class="v">Coilover + BBK</span></div></div></div>
-<div class="build-slide s3"><span class="b-tag">BRZ / 86 · HALO BUILD</span><span class="b-num">03 / BRZ BUILD</span><h3 class="b-name">500-HP <span class="em">BRZ.</span></h3><p class="b-desc">The build that put RPM on the map for the BRZ community. Forced induction conversion, full engine build, ECU work, and the tuning to make every horsepower drivable.</p><div class="b-specs"><div><span class="k">Platform</span><span class="v">BRZ / 86</span></div><div><span class="k">Power</span><span class="v">500+ WHP</span></div><div><span class="k">Approach</span><span class="v">Forced Induction</span></div></div></div>
-<div class="build-slide s4"><span class="b-tag">CROSSTREK · OVERLAND</span><span class="b-num">04 / CROSSTREK</span><h3 class="b-name">Lifted &amp; <span class="em">Loaded.</span></h3><p class="b-desc">Overland-spec Crosstrek with full lift kit, off-road bumper, light bar, and an all-terrain package that's seen more dirt than most trucks.</p><div class="b-specs"><div><span class="k">Platform</span><span class="v">Crosstrek</span></div><div><span class="k">Setup</span><span class="v">2.5" Lift</span></div><div><span class="k">Use</span><span class="v">Overland</span></div></div></div>
-</div>
-<div class="builds-progress" id="buildsProgress"><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div></div>
-</div></section>
-
-<section class="reviews" id="reviews">
+<section class="reviews">
 <div class="container">
 <div class="reviews-head reveal">
-<div><span class="eyebrow">Chapter 06 — The Verdict</span><h2 class="display" style="margin-top:20px;">Reviews That<br/>Drive Here.</h2></div>
-<div class="right"><div class="stars">★★★★★</div><div class="score">4.7<span class="of">/5</span></div><div class="meta">14+ Google Reviews · Verified Customers</div></div>
+<div><span class="eyebrow">The Verdict</span><h2 class="display" style="margin-top:20px;">What Customers<br/>Say.</h2></div>
+<div class="right"><div class="stars">★★★★★</div><div class="score">4.7<span class="of">/5</span></div><div class="meta">14+ Verified Google Reviews</div></div>
 </div>
 <div class="reviews-track">
 <div class="reviews-strip">
-<div class="review"><span class="quote">"</span><p>I am new to the Subaru world. Bought a used WRX with some high performance extras. We live about 30 miles away from H.B., but Powered By RPM is who EVERYONE I talked to said I need to go see. And I am SO HAPPY I did.</p><div class="author"><div class="auth-left"><div class="avatar">M</div><div><div class="name">Matthew Diaz</div><div class="src">Google · 3y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
-<div class="review"><span class="quote">"</span><p>Took my Crosstrek here after getting a bunch of recommendations from people regarding the shop, pricing, and quality. They weren't wrong. The dealer told me my engine was leaking and it was going to be 3k to fix — RPM found the real problem.</p><div class="author"><div class="auth-left"><div class="avatar">N</div><div><div class="name">Nick Ceja</div><div class="src">Google · 4y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
-<div class="review"><span class="quote">"</span><p>RPM is the best and only place to take your Subi. I live 30+ miles from Powered by RPM but only want the RPM team working on my STI. Thanks for always being the best!</p><div class="author"><div class="auth-left"><div class="avatar">S</div><div><div class="name">Sean S.</div><div class="src">Google Local Guide</div></div></div><div class="stars-sm">★★★★★</div></div></div>
-<div class="review"><span class="quote">"</span><p>RPM has been a dealer of ours for years. All jobs sent his way have had zero issue. RPM is our choice as our local Authorized Install Facility for any and all installs.</p><div class="author"><div class="auth-left"><div class="avatar">CP</div><div><div class="name">Crawford Performance</div><div class="src">Industry Partner</div></div></div><div class="stars-sm">★★★★★</div></div></div>
-<div class="review"><span class="quote">"</span><p>Very pleased with RPM's clean and professional installation. They made sure to text me photos and updates on my car as work progressed. There were minor unexpected issues — they corrected them without missing a beat.</p><div class="author"><div class="auth-left"><div class="avatar">C</div><div><div class="name">Corey Bishop</div><div class="src">Google · 8y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+<div class="review"><span class="quote">"</span><p>I am new to the Subaru world. Bought a used WRX with high performance extras. Powered By RPM is who EVERYONE said I need to go see. SO HAPPY I did.</p><div class="author"><div class="auth-left"><div class="avatar">M</div><div><div class="name">Matthew Diaz</div><div class="src">Google · 3y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+<div class="review"><span class="quote">"</span><p>The dealer told me my engine was leaking and it was going to be 3k to fix — RPM found the real problem.</p><div class="author"><div class="auth-left"><div class="avatar">N</div><div><div class="name">Nick Ceja</div><div class="src">Google · 4y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+<div class="review"><span class="quote">"</span><p>RPM is the best and only place to take your Subi. I live 30+ miles from Powered by RPM but only want the RPM team working on my STI.</p><div class="author"><div class="auth-left"><div class="avatar">S</div><div><div class="name">Sean S.</div><div class="src">Google Local Guide</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+<div class="review"><span class="quote">"</span><p>RPM has been a dealer of ours for years. All jobs sent his way have had zero issue.</p><div class="author"><div class="auth-left"><div class="avatar">CP</div><div><div class="name">Crawford Performance</div><div class="src">Industry Partner</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+<div class="review"><span class="quote">"</span><p>Very pleased with RPM's clean and professional installation. They made sure to text me photos and updates.</p><div class="author"><div class="auth-left"><div class="avatar">C</div><div><div class="name">Corey Bishop</div><div class="src">Google · 8y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
 <div class="review"><span class="quote">"</span><p>Best Subie shop.</p><div class="author"><div class="auth-left"><div class="avatar">CV</div><div><div class="name">Carlos Vega</div><div class="src">Google · 5y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
 </div>
 <div class="reviews-strip dup" aria-hidden="true">
-<div class="review"><span class="quote">"</span><p>I am new to the Subaru world. Bought a used WRX with some high performance extras. We live about 30 miles away from H.B., but Powered By RPM is who EVERYONE I talked to said I need to go see. And I am SO HAPPY I did.</p><div class="author"><div class="auth-left"><div class="avatar">M</div><div><div class="name">Matthew Diaz</div><div class="src">Google · 3y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
-<div class="review"><span class="quote">"</span><p>Took my Crosstrek here after getting a bunch of recommendations from people regarding the shop, pricing, and quality. They weren't wrong. The dealer told me my engine was leaking and it was going to be 3k to fix — RPM found the real problem.</p><div class="author"><div class="auth-left"><div class="avatar">N</div><div><div class="name">Nick Ceja</div><div class="src">Google · 4y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
-<div class="review"><span class="quote">"</span><p>RPM is the best and only place to take your Subi. I live 30+ miles from Powered by RPM but only want the RPM team working on my STI. Thanks for always being the best!</p><div class="author"><div class="auth-left"><div class="avatar">S</div><div><div class="name">Sean S.</div><div class="src">Google Local Guide</div></div></div><div class="stars-sm">★★★★★</div></div></div>
-<div class="review"><span class="quote">"</span><p>RPM has been a dealer of ours for years. All jobs sent his way have had zero issue. RPM is our choice as our local Authorized Install Facility for any and all installs.</p><div class="author"><div class="auth-left"><div class="avatar">CP</div><div><div class="name">Crawford Performance</div><div class="src">Industry Partner</div></div></div><div class="stars-sm">★★★★★</div></div></div>
-<div class="review"><span class="quote">"</span><p>Very pleased with RPM's clean and professional installation. They made sure to text me photos and updates on my car as work progressed. There were minor unexpected issues — they corrected them without missing a beat.</p><div class="author"><div class="auth-left"><div class="avatar">C</div><div><div class="name">Corey Bishop</div><div class="src">Google · 8y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+<div class="review"><span class="quote">"</span><p>I am new to the Subaru world. Bought a used WRX with high performance extras. Powered By RPM is who EVERYONE said I need to go see. SO HAPPY I did.</p><div class="author"><div class="auth-left"><div class="avatar">M</div><div><div class="name">Matthew Diaz</div><div class="src">Google · 3y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+<div class="review"><span class="quote">"</span><p>The dealer told me my engine was leaking and it was going to be 3k to fix — RPM found the real problem.</p><div class="author"><div class="auth-left"><div class="avatar">N</div><div><div class="name">Nick Ceja</div><div class="src">Google · 4y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+<div class="review"><span class="quote">"</span><p>RPM is the best and only place to take your Subi.</p><div class="author"><div class="auth-left"><div class="avatar">S</div><div><div class="name">Sean S.</div><div class="src">Google Local Guide</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+<div class="review"><span class="quote">"</span><p>RPM has been a dealer of ours for years. All jobs sent his way have had zero issue.</p><div class="author"><div class="auth-left"><div class="avatar">CP</div><div><div class="name">Crawford Performance</div><div class="src">Industry Partner</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+<div class="review"><span class="quote">"</span><p>Very pleased with RPM's clean and professional installation.</p><div class="author"><div class="auth-left"><div class="avatar">C</div><div><div class="name">Corey Bishop</div><div class="src">Google · 8y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
 <div class="review"><span class="quote">"</span><p>Best Subie shop.</p><div class="author"><div class="auth-left"><div class="avatar">CV</div><div><div class="name">Carlos Vega</div><div class="src">Google · 5y ago</div></div></div><div class="stars-sm">★★★★★</div></div></div>
+</div></div></div></section>
 </div>
-</div></div></section>
 
-<section class="brands">
-<div class="container">
-<div class="brands-head reveal"><h3>Trusted by the brands<br/>your build depends on.</h3><span class="eyebrow">Authorized · Verified · Installed Here</span></div>
-<div class="brands-grid reveal reveal-delay-1">
-<div class="brand"><span class="badge">AUTHORIZED</span><div class="name">CRAWFORD</div><div class="sub">Performance</div></div>
-<div class="brand"><div class="name">ACT</div><div class="sub">Twin Disc Clutch</div></div>
-<div class="brand"><div class="name">ETS</div><div class="sub">Extreme Turbo</div></div>
-<div class="brand"><div class="name">APR</div><div class="sub">Carbon Aero</div></div>
-<div class="brand"><div class="name">KOYORAD</div><div class="sub">Cooling</div></div>
-</div></div></section>
 
-<section class="financing">
-<div class="container">
-<div class="fin-card reveal">
-<div class="fin-text"><span class="eyebrow" style="color:var(--blue2);">Snap Finance Available</span><h3>Build Now.<br/>Pay Over Time.</h3><p>Get approved online in minutes for up to $5,000 toward your build. No perfect credit required. Walk into the shop with a plan and roll out with horsepower.</p></div>
-<div class="fin-cta"><div class="big">$5<span class="sm">K</span></div><div class="terms">Approval Limit</div><a href="tel:+17143970820" class="btn magnetic"><span>Get Approved</span><span class="arrow">↗</span></a></div>
-</div></div></section>
-
-<section class="contact" id="visit">
-<div class="container">
-<div class="contact-head reveal"><span class="eyebrow">Chapter 07 — The Visit</span><h2 class="display">Stop by the<br/>shop in <span class="em">Huntington Beach.</span></h2></div>
-<div class="contact-grid">
-<div class="contact-cards reveal">
-<div class="contact-card"><div class="head"><span class="lbl">Call or Text RPM</span><span class="num">01 / 05</span></div><a href="tel:+17143970820" class="val big">(714) 397-0820</a><div class="sub">Mon–Fri 10–6 · Sat 1–5</div></div>
-<div class="contact-card"><div class="head"><span class="lbl">The Shop</span><span class="num">02 / 05</span></div><a href="https://maps.google.com/?q=18091+Redondo+Cir,+Huntington+Beach,+CA+92648" target="_blank" rel="noopener" class="val">18091 Redondo Cir, Unit i<br/>Huntington Beach, CA 92648</a><div class="sub">Wheelchair accessible · On-site parking</div></div>
-<div class="contact-card"><div class="head"><span class="lbl">Hours</span><span class="num">03 / 05</span></div><div class="hours-grid"><div class="r"><span class="d">Monday</span><span class="t">10:00 – 18:00</span></div><div class="r"><span class="d">Tuesday</span><span class="t">10:00 – 18:00</span></div><div class="r"><span class="d">Wednesday</span><span class="t">10:00 – 18:00</span></div><div class="r"><span class="d">Thursday</span><span class="t">10:00 – 18:00</span></div><div class="r"><span class="d">Friday</span><span class="t">10:00 – 18:00</span></div><div class="r"><span class="d">Saturday</span><span class="t">13:00 – 17:00</span></div><div class="r closed"><span class="d">Sunday</span><span class="t">Closed</span></div></div></div>
-<div class="contact-card"><div class="head"><span class="lbl">Instagram</span><span class="num">04 / 05</span></div><a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener" class="val" style="font-size:1.05rem">@poweredbyrpm</a><div class="sub">Live shop feed · Build photos · Parts in stock</div></div>
-<div class="contact-card"><div class="head"><span class="lbl">Payments</span><span class="num">05 / 05</span></div><div class="val" style="font-size:1.05rem;color:var(--ink2);font-weight:400;">Credit Card · Debit Card · Snap Financing</div></div>
-</div>
-<div class="map-wrap reveal reveal-delay-1"><div class="map-overlay"><span class="live-dot"></span>RPM HQ · LIVE</div><iframe src="https://www.google.com/maps?q=18091+Redondo+Cir,+Huntington+Beach,+CA+92648&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Powered By RPM map"></iframe></div>
-</div></div></section>
-
+</main>
 <footer>
 <div class="container">
 <div class="footer-display">POWERED BY RPM</div>
@@ -896,201 +318,13 @@ Curated stock · Ships nationwide<br/>Local pickup at the shop<br/>
 <div class="brand"><div class="brand-mark">RPM</div><div class="brand-text"><span class="name">Powered By RPM</span><span class="sub">Racing Performance Motorsport</span></div></div>
 <p>Huntington Beach's trusted Subaru and high-performance shop. Builds, installs, diagnostics, and the kind of honest work that keeps customers driving back.</p>
 </div>
-<div class="footer-col"><h5>Explore</h5><ul><li><a href="#about">Story</a></li><li><a href="#services">Work</a></li>
-    <li><a href="#shop">Shop</a></li><li><a href="#specialty">BRZ / 86</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#visit">Visit</a></li></ul></div>
-<div class="footer-col"><h5>Contact</h5><ul><li><a href="tel:+17143970820">(714) 397-0820</a></li><li><a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener">Instagram @poweredbyrpm</a></li><li>Mon–Fri 10–6</li><li>Sat 1–5</li></ul></div>
+<div class="footer-col"><h5>Tabs</h5><ul><li><a href="#home" data-tab="home">Home</a></li><li><a href="#work" data-tab="work">Work</a></li><li><a href="#shop" data-tab="shop">Shop</a></li><li><a href="#visit" data-tab="visit">Visit</a></li></ul></div>
+<div class="footer-col"><h5>Contact</h5><ul><li><a href="tel:+17143970820">(714) 397-0820</a></li><li><a href="https://www.instagram.com/poweredbyrpm/" target="_blank" rel="noopener">@poweredbyrpm</a></li><li>Mon–Fri 10–6</li><li>Sat 1–5</li></ul></div>
 <div class="footer-col"><h5>Location</h5><ul><li><a href="https://maps.google.com/?q=18091+Redondo+Cir,+Huntington+Beach,+CA+92648" target="_blank" rel="noopener">18091 Redondo Cir i</a></li><li>Huntington Beach, CA</li><li>92648</li></ul></div>
 </div>
-<div class="footer-bottom"><div>© <span id="year"></span> Powered By RPM. Racing Performance Motorsport.</div><div class="badges"><span>♿ Accessible</span><span>Small Business</span><span>Made in HB</span></div></div>
+<div class="footer-bottom"><div>© <span data-year></span> Powered By RPM. Racing Performance Motorsport.</div><div class="badges"><span>♿ Accessible</span><span>Small Business</span><span>Made in HB</span></div></div>
 </div></footer>
-
 <a href="tel:+17143970820" class="float-call">📞 Call RPM — (714) 397-0820</a>
-
-<script>
-(function(){'use strict';
-document.documentElement.classList.remove('no-js');
-document.documentElement.classList.add('js');
-const isDesktop=window.matchMedia('(hover: hover) and (pointer: fine)').matches&&window.innerWidth>=1024;
-const prm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-// Char split
-const hl=document.getElementById('heroHeadline');
-if(hl){let ci=0;hl.querySelectorAll('.line').forEach(line=>{const t=line.dataset.text||'';line.innerHTML='';[...t].forEach(ch=>{const s=document.createElement('span');s.className='char';s.style.setProperty('--i',ci++);s.textContent=ch===' '?'\u00A0':ch;line.appendChild(s)})})}
-
-// Cursor
-const cur=document.getElementById('cursor'),dot=document.getElementById('cursorDot');
-if(isDesktop&&cur&&dot){let mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`});
-(function l(){cx+=(mx-cx)*.22;cy+=(my-cy)*.22;cur.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;requestAnimationFrame(l)})();
-document.querySelectorAll('a,button,.service-row,.review,.brand,.contact-card').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('is-hover'));el.addEventListener('mouseleave',()=>cur.classList.remove('is-hover'))})}else{[cur,dot].forEach(el=>{if(el)el.style.display='none'});document.documentElement.style.cursor='auto';document.body.style.cursor='auto';const s=document.createElement('style');s.textContent='body,a,button,*{cursor:auto!important}';document.head.appendChild(s)}
-
-// Goo cursor
-const sv=document.getElementById('gooCursor');
-if(sv&&isDesktop){const balls=sv.querySelectorAll('.gb');let mx=innerWidth/2,my=innerHeight/2;const pos=[];balls.forEach(()=>pos.push({x:mx,y:my}));const lags=[0.45,0.28,0.18,0.12];
-addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
-function loop(){pos.forEach((p,i)=>{p.x+=(mx-p.x)*lags[i];p.y+=(my-p.y)*lags[i];balls[i].setAttribute('cx',p.x);balls[i].setAttribute('cy',p.y)});sv.style.left='0';sv.style.top='0';sv.style.width=innerWidth+'px';sv.style.height=innerHeight+'px';sv.setAttribute('viewBox',`0 0 ${innerWidth} ${innerHeight}`);requestAnimationFrame(loop)}
-sv.style.width=innerWidth+'px';sv.style.height=innerHeight+'px';sv.setAttribute('viewBox',`0 0 ${innerWidth} ${innerHeight}`);loop()}else if(sv){sv.style.display='none'}
-
-// Magnetic
-if(isDesktop&&!prm){document.querySelectorAll('.magnetic').forEach(el=>{el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();const x=e.clientX-r.left-r.width/2;const y=e.clientY-r.top-r.height/2;el.style.transform=`translate(${x*.25}px,${y*.25}px)`});el.addEventListener('mouseleave',()=>{el.style.transform=''})})}
-
-// Sticky nav + scroll progress
-const nav=document.getElementById('topNav'),pg=document.getElementById('scrollProgress');
-function sc(){const y=scrollY;if(nav){if(y>40)nav.classList.add('scrolled');else nav.classList.remove('scrolled')}if(pg){const m=(document.documentElement.scrollHeight-innerHeight)||1;pg.style.width=Math.min(100,(y/m)*100)+'%'}}
-addEventListener('scroll',sc,{passive:true});sc();
-
-// Section dots
-const dots=document.querySelectorAll('.section-dots a'),secs=Array.from(dots).map(a=>document.getElementById(a.dataset.section)).filter(Boolean);
-if(dots.length&&secs.length&&'IntersectionObserver' in window){const so=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;dots.forEach(d=>d.classList.toggle('active',d.dataset.section===id))}})},{rootMargin:'-40% 0px -40% 0px',threshold:0});secs.forEach(s=>so.observe(s))}
-
-// Reveal
-const rv=document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});rv.forEach(el=>ro.observe(el));setTimeout(()=>rv.forEach(el=>el.classList.add('in')),5000)}else{rv.forEach(el=>el.classList.add('in'))}
-
-// Scramble numbers
-function sn(el){if(el.dataset.scrambled)return;el.dataset.scrambled='1';const t=parseFloat(el.dataset.target);if(isNaN(t))return;const d=parseInt(el.dataset.decimal||'0',10),dur=1600,st=performance.now();const tk=now=>{const tt=Math.min((now-st)/dur,1);const e=1-Math.pow(1-tt,4);const cv=t*e;if(tt<.75){const sa=(1-e)*.5;const n=cv+(Math.random()-.5)*t*sa;el.textContent=d>0?n.toFixed(d):Math.round(n)}else{el.textContent=d>0?cv.toFixed(d):Math.round(cv)}if(tt<1)requestAnimationFrame(tk);else el.textContent=d>0?t.toFixed(d):t};el.textContent='0';requestAnimationFrame(tk)}
-const scrs=document.querySelectorAll('.scramble');
-if('IntersectionObserver' in window){const so2=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){sn(e.target);so2.unobserve(e.target)}})},{threshold:.4});scrs.forEach(el=>so2.observe(el))}
-
-// Gauge ticks
-const tg=document.getElementById('ticks');
-if(tg){const gx=200,gy=200,r1=158,r2=175,fr=[];for(let i=0;i<=40;i++){const a=(-135+(i/40)*270)*Math.PI/180;const x1=gx+Math.cos(a)*r1,y1=gy+Math.sin(a)*r1;const x2=gx+Math.cos(a)*r2,y2=gy+Math.sin(a)*r2;const cls=i>=32?'red':(i%5===0?'major':'');fr.push(`<line class="gauge-tick ${cls}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`);if(i%5===0){const tx=gx+Math.cos(a)*138,ty=gy+Math.sin(a)*138+4;fr.push(`<text class="gauge-num" x="${tx}" y="${ty}" text-anchor="middle">${(i/40)*8}</text>`)}}tg.innerHTML=fr.join('')}
-
-// Gauge — animate once on viewport entry (NOT scroll-linked)
-(function gauge(){
-  const ga=document.getElementById('gauge'),nd=document.getElementById('gaugeNeedle'),ar=document.getElementById('gaugeArc'),ro2=document.getElementById('gaugeReadout');
-  if(!ga||!nd)return;
-  let done=false;
-  function animate(){
-    if(done)return;done=true;
-    const start=performance.now(),dur=2200;
-    function tick(now){
-      const t=Math.min((now-start)/dur,1);
-      const ease=1-Math.pow(1-t,3);
-      const p=ease;
-      nd.style.transform=`rotate(${-135+p*230}deg)`;
-      if(ar)ar.style.strokeDashoffset=String(1000-(1000-240)*p);
-      if(ro2)ro2.textContent=Math.round(p*500);
-      if(t<1)requestAnimationFrame(tick);
-      else if(ro2)ro2.textContent='500';
-    }
-    requestAnimationFrame(tick);
-  }
-  if('IntersectionObserver' in window){
-    const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){animate();ob.unobserve(e.target)}})},{threshold:.35});
-    ob.observe(ga);
-  }else{animate()}
-})();
-
-
-
-// Aurora shader
-(function aurora(){const cv=document.getElementById('aurora');if(!cv)return;const gl=cv.getContext('webgl')||cv.getContext('experimental-webgl');if(!gl){cv.style.display='none';return}
-const vs=`attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}`;
-const fs=`precision highp float;uniform float u_t;uniform vec2 u_r;uniform vec2 u_m;
-vec2 hash(vec2 p){p=vec2(dot(p,vec2(127.1,311.7)),dot(p,vec2(269.5,183.3)));return -1.0+2.0*fract(sin(p)*43758.5453);}
-float noise(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*(3.0-2.0*f);return mix(mix(dot(hash(i+vec2(0,0)),f-vec2(0,0)),dot(hash(i+vec2(1,0)),f-vec2(1,0)),u.x),mix(dot(hash(i+vec2(0,1)),f-vec2(0,1)),dot(hash(i+vec2(1,1)),f-vec2(1,1)),u.x),u.y);}
-float fbm(vec2 p){float v=0.0,a=0.5;for(int i=0;i<6;i++){v+=a*noise(p);p*=2.0;a*=0.5;}return v;}
-void main(){vec2 uv=gl_FragCoord.xy/u_r;vec2 p=uv*3.5;p.x*=u_r.x/u_r.y;float t=u_t*0.08;
-vec2 q=vec2(fbm(p+t),fbm(p-t*0.7+vec2(5.2,1.3)));vec2 r=vec2(fbm(p+q*1.8+vec2(1.7,9.2)+t*0.3),fbm(p+q*1.4+vec2(8.3,2.8)-t*0.4));float n=fbm(p+r*1.5);
-vec2 mo=(u_m-0.5)*0.3;n+=fbm(p+mo*2.0+t*0.2)*0.2;
-vec3 c1=vec3(0.018,0.025,0.045);vec3 c2=vec3(0.04,0.18,0.55);vec3 c3=vec3(0.18,0.49,1.0);vec3 c4=vec3(0.55,0.78,1.0);
-vec3 col=mix(c1,c2,smoothstep(0.0,0.45,n));col=mix(col,c3,smoothstep(0.4,0.7,n));col=mix(col,c4,smoothstep(0.75,0.95,n)*0.6);
-float streak=smoothstep(0.78,0.92,n);col+=streak*vec3(0.3,0.55,1.0)*0.8;
-float vig=smoothstep(1.3,0.35,length(uv-vec2(0.5,0.55)));col*=mix(0.35,1.0,vig);
-float g=fract(sin(dot(gl_FragCoord.xy,vec2(12.9898,78.233)))*43758.5453);col+=(g-0.5)*0.025;
-gl_FragColor=vec4(col,1.0);}`;
-function cs(type,src){const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)){return null}return s}
-const v=cs(gl.VERTEX_SHADER,vs),f=cs(gl.FRAGMENT_SHADER,fs);if(!v||!f){cv.style.display='none';return}
-const pr=gl.createProgram();gl.attachShader(pr,v);gl.attachShader(pr,f);gl.linkProgram(pr);if(!gl.getProgramParameter(pr,gl.LINK_STATUS)){cv.style.display='none';return}
-gl.useProgram(pr);const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);
-const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
-const uT=gl.getUniformLocation(pr,'u_t'),uR=gl.getUniformLocation(pr,'u_r'),uM=gl.getUniformLocation(pr,'u_m');
-let mx=0.5,my=0.5;addEventListener('mousemove',e=>{mx=e.clientX/innerWidth;my=1-e.clientY/innerHeight});
-function size(){const dpr=Math.min(devicePixelRatio,1.5);const w=cv.clientWidth*dpr,h=cv.clientHeight*dpr;if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;gl.viewport(0,0,w,h)}}
-size();addEventListener('resize',size);let lastY=scrollY,lastT=performance.now(),velMult=1,timeAcc=0;
-function loop(){size();const now=performance.now();const dt=Math.max(1,now-lastT);const dy=scrollY-lastY;const vel=Math.abs(dy/dt);velMult=velMult*0.93+Math.min(7,1+vel*8)*0.07;timeAcc+=(dt/1000)*velMult;lastY=scrollY;lastT=now;gl.uniform1f(uT,timeAcc);gl.uniform2f(uR,cv.width,cv.height);gl.uniform2f(uM,mx,my);gl.drawArrays(gl.TRIANGLES,0,6);requestAnimationFrame(loop)}loop()})();
-
-// 3D Wheel (HIGH QUALITY, BIGGER)
-(function wheel(){const w3c=document.getElementById('wheel3d');if(!w3c||typeof THREE==='undefined'||prm)return;
-try{const sc=new THREE.Scene();const cm=new THREE.PerspectiveCamera(40,1,0.1,100);cm.position.z=6.5;
-const rn=new THREE.WebGLRenderer({canvas:w3c,alpha:true,antialias:true});rn.setPixelRatio(Math.min(devicePixelRatio,2));
-const wh=new THREE.Group();
-// Outer rim with depth (torus)
-const outerRim=new THREE.Mesh(new THREE.TorusGeometry(2.1,0.28,32,80),new THREE.MeshStandardMaterial({color:0x2f7dff,metalness:.95,roughness:.15,emissive:0x0b3a8a,emissiveIntensity:.4}));wh.add(outerRim);
-// Inner rim
-wh.add(new THREE.Mesh(new THREE.TorusGeometry(1.7,0.12,24,64),new THREE.MeshStandardMaterial({color:0xf4f4f6,metalness:.92,roughness:.18})));
-// Lip ring
-wh.add(new THREE.Mesh(new THREE.TorusGeometry(1.9,0.06,20,64),new THREE.MeshStandardMaterial({color:0x5aa0ff,metalness:.95,roughness:.1,emissive:0x2f7dff,emissiveIntensity:.5})));
-// 5 spokes
-for(let i=0;i<5;i++){const s=new THREE.Mesh(new THREE.BoxGeometry(1.7,0.18,0.1),new THREE.MeshStandardMaterial({color:0xe8e9ee,metalness:.88,roughness:.25}));s.rotation.z=(i*Math.PI*2)/5;wh.add(s);
-const sd=new THREE.Mesh(new THREE.BoxGeometry(1.4,0.05,0.13),new THREE.MeshStandardMaterial({color:0x2f7dff,metalness:.9,roughness:.15,emissive:0x2f7dff,emissiveIntensity:.6}));sd.rotation.z=(i*Math.PI*2)/5;wh.add(sd)}
-// Brake rotor
-const rotor=new THREE.Mesh(new THREE.CylinderGeometry(1.4,1.4,0.06,48,1),new THREE.MeshStandardMaterial({color:0x4a4b54,metalness:.7,roughness:.5}));rotor.rotation.x=Math.PI/2;rotor.position.z=-0.18;wh.add(rotor);
-// Rotor vents (cosmetic holes ring)
-for(let i=0;i<24;i++){const h=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,0.07,12),new THREE.MeshStandardMaterial({color:0x06070a}));const a=(i/24)*Math.PI*2;h.position.set(Math.cos(a)*1.1,Math.sin(a)*1.1,-0.18);h.rotation.x=Math.PI/2;wh.add(h)}
-// Caliper
-const cal=new THREE.Mesh(new THREE.BoxGeometry(0.8,0.4,0.32),new THREE.MeshStandardMaterial({color:0x2f7dff,metalness:.85,roughness:.25,emissive:0x1058b3,emissiveIntensity:.4}));cal.position.set(0,1.35,-0.1);wh.add(cal);
-// Caliper text plate
-const calPlate=new THREE.Mesh(new THREE.PlaneGeometry(0.6,0.15),new THREE.MeshStandardMaterial({color:0xf4f4f6,metalness:.1,roughness:.6,emissive:0xf4f4f6,emissiveIntensity:.2}));calPlate.position.set(0,1.35,0.07);wh.add(calPlate);
-// Hub
-const hub=new THREE.Mesh(new THREE.CylinderGeometry(0.36,0.36,0.55,32),new THREE.MeshStandardMaterial({color:0x2f7dff,metalness:.95,roughness:.12,emissive:0x2f7dff,emissiveIntensity:.55}));hub.rotation.x=Math.PI/2;wh.add(hub);
-// Center cap
-const cap=new THREE.Mesh(new THREE.CylinderGeometry(0.18,0.18,0.6,16),new THREE.MeshStandardMaterial({color:0xf4f4f6,metalness:.95,roughness:.1}));cap.rotation.x=Math.PI/2;wh.add(cap);
-// Lug nuts (5)
-for(let i=0;i<5;i++){const lug=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,0.12,8),new THREE.MeshStandardMaterial({color:0xc5c6cc,metalness:.95,roughness:.2}));const a=(i*Math.PI*2)/5;lug.position.set(Math.cos(a)*0.55,Math.sin(a)*0.55,0.3);lug.rotation.x=Math.PI/2;wh.add(lug)}
-sc.add(wh);
-// Lighting - cinematic
-sc.add(new THREE.AmbientLight(0xffffff,.3));
-const dl=new THREE.DirectionalLight(0xffffff,1.8);dl.position.set(5,6,6);sc.add(dl);
-const bl=new THREE.PointLight(0x2f7dff,3.5,18);bl.position.set(-5,3,4);sc.add(bl);
-const bl2=new THREE.PointLight(0xff3a45,1,10);bl2.position.set(4,-4,3);sc.add(bl2);
-const rim=new THREE.PointLight(0x5aa0ff,2,12);rim.position.set(0,0,-4);sc.add(rim);
-wh.rotation.x=0.35;wh.rotation.y=0.25;
-function rs(){const r=w3c.getBoundingClientRect();const w=r.width||300,h=r.height||300;cm.aspect=w/h;cm.updateProjectionMatrix();rn.setSize(w,h,false)}
-rs();addEventListener('resize',rs);
-let wmx=0,wmy=0;addEventListener('mousemove',e=>{wmx=(e.clientX/innerWidth-.5)*.4;wmy=(e.clientY/innerHeight-.5)*.4});
-function anim(){wh.rotation.z+=0.004;wh.rotation.x+=(0.35+wmy-wh.rotation.x)*0.05;wh.rotation.y+=(0.25+wmx-wh.rotation.y)*0.05;rn.render(sc,cm);requestAnimationFrame(anim)}anim()}catch(err){if(w3c)w3c.style.display='none'}})();
-
-// Idle pulse
-(function idle(){let timer;function start(){clearTimeout(timer);document.documentElement.classList.remove('idle');timer=setTimeout(()=>document.documentElement.classList.add('idle'),6000)}['mousemove','scroll','keydown','touchstart','click'].forEach(ev=>addEventListener(ev,start,{passive:true}));start()})();
-
-
-
-// === SKIP INTRO ===
-(function introSkip(){
-  const intro=document.querySelector('.intro');
-  if(!intro)return;
-  function skip(){intro.classList.add('dismissed');setTimeout(()=>intro.style.display='none',600)}
-  const skipBtn=document.getElementById('introSkip');
-  if(skipBtn)skipBtn.addEventListener('click',skip);
-  // Also dismiss on any click in the intro
-  intro.addEventListener('click',e=>{if(e.target!==skipBtn)skip()});
-  // Hard auto-remove after 3.5s no matter what
-  setTimeout(()=>{if(intro&&intro.style.display!=='none')intro.style.display='none'},4000);
-})();
-
-// === SHOP FILTER ===
-(function shop(){
-  const f=document.getElementById('shopFilters'),g=document.getElementById('shopGrid');
-  if(!f||!g)return;
-  const cards=g.querySelectorAll('.product-card');
-  f.addEventListener('click',e=>{
-    const btn=e.target.closest('.shop-filter');if(!btn)return;
-    f.querySelectorAll('.shop-filter').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    const cat=btn.dataset.filter;
-    cards.forEach(c=>{
-      const show=cat==='all'||c.dataset.cat===cat;
-      c.classList.toggle('hide',!show);
-    });
-  });
-})();
-
-// Year
-const yr=document.getElementById('year');if(yr)yr.textContent=new Date().getFullYear();
-})();
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
